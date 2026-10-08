@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Link from 'next/link';
+import Script from 'next/script';
 import './globals.css';
 import {
   Vault,
@@ -9,7 +10,6 @@ import {
   Building2,
   ShieldCheck,
   ExternalLink,
-  Heart,
   Layers,
   Sparkles,
   ShoppingBag,
@@ -72,13 +72,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`}>
+      <head>
+        {/* Google AdSense Script Loader */}
+        <Script
+          id="google-adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className="bg-slate-950 text-slate-100 flex flex-col min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
         {/* Top Notification Announcement Bar */}
         <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 border-b border-indigo-500/20 py-1.5 px-4 text-center text-xs font-medium text-indigo-200 flex items-center justify-center gap-2">
           <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
-          <span>Form your LLC in Delaware, Wyoming, or any US State for $0 + state fees</span>
+          <span>Form your LLC with Northwest Registered Agent ($39 + State Fee)</span>
           <a
-            href="https://www.zenbusiness.com/?aff=brandvault"
+            href="https://www.northwestregisteredagent.com/?aff=brandvault"
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="underline text-white hover:text-amber-300 font-semibold transition-colors ml-1"
@@ -100,7 +110,7 @@ export default function RootLayout({
                   BRAND<span className="text-indigo-400">VAULT</span>
                 </span>
                 <span className="text-[10px] font-mono tracking-widest text-slate-400 -mt-1 uppercase">
-                  Identity Engine
+                  Clearance Suite
                 </span>
               </div>
             </Link>
@@ -108,7 +118,7 @@ export default function RootLayout({
             {/* Desktop Navigation Links */}
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
               <Link href="/" className="hover:text-white transition-colors">
-                Brand Scanner
+                Brand Clearance
               </Link>
               <Link href="/llc-search/delaware" className="hover:text-white transition-colors">
                 Delaware LLC
@@ -127,13 +137,13 @@ export default function RootLayout({
             {/* Header Right Action CTA */}
             <div className="flex items-center gap-3">
               <a
-                href="https://www.zenbusiness.com/?aff=brandvault"
+                href="https://www.northwestregisteredagent.com/?aff=brandvault"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-xl text-xs shadow-md shadow-indigo-500/20 transition-all flex items-center gap-1.5"
               >
                 <ShoppingBag className="w-3.5 h-3.5" />
-                <span>Form an LLC ($0)</span>
+                <span>Start LLC ($39)</span>
               </a>
             </div>
           </div>
@@ -196,7 +206,7 @@ export default function RootLayout({
                 </ul>
               </div>
 
-              {/* Tools & Resources */}
+              {/* Tools & Registrars */}
               <div className="space-y-2 text-xs">
                 <div className="font-bold text-white uppercase tracking-wider">Tools &amp; Registrars</div>
                 <ul className="space-y-1.5 text-slate-400">

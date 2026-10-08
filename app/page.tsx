@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import UnifiedBrandChecker from '@/components/UnifiedBrandChecker';
+import AdBanner from '@/components/AdBanner';
 import statesData from '@/data/states.json';
 import {
   Globe,
@@ -16,8 +17,10 @@ import {
   HelpCircle,
 } from 'lucide-react';
 
+const TOP_STATE_SLUGS = ['delaware', 'wyoming', 'nevada', 'florida', 'texas', 'california'];
+
 export default function HomePage() {
-  const popularStates = statesData.filter((s) => s.popular);
+  const topStates = statesData.filter((s) => TOP_STATE_SLUGS.includes(s.slug));
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -33,7 +36,7 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.1]">
-            Check Domains, Social Handles & <br className="hidden sm:inline" />
+            Check Domains, Social Handles &amp; <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               50-State LLC Availability
             </span>{' '}
@@ -41,7 +44,7 @@ export default function HomePage() {
           </h1>
 
           <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-300">
-            Verify real-time DNS records, probe social username availability, and access official Secretary of State business registries in one search.
+            Verify real-time DNS records, probe social username availability, and access official Secretary of State business registries in one unified search.
           </p>
 
           {/* Search App Integration */}
@@ -50,6 +53,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Ad slot */}
+      <div className="max-w-5xl mx-auto px-4 w-full">
+        <AdBanner slot="1234567890" label="Sponsored Partner" />
+      </div>
 
       {/* Feature Highlights Grid */}
       <section className="py-16 border-t border-slate-800/80 bg-slate-900/30">
@@ -68,9 +76,9 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
                 <Globe className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Live DNS & DoH Resolution</h3>
+              <h3 className="text-lg font-bold text-white">Live DNS &amp; DoH Resolution</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Direct querying against Cloudflare and Google 1.1.1.1 DNS over HTTPS to inspect live A/AAAA/NS authoritative records in milliseconds.
+                Direct querying against Cloudflare and Google DNS over HTTPS to inspect live .com, .io, .ai, and .co records in milliseconds.
               </p>
             </div>
 
@@ -80,7 +88,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-lg font-bold text-white">50 US State Business Registries</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Direct lookup links, annual maintenance schedules, state filing fee calculators, and compliance guides for Delaware, Wyoming, and every US state.
+                Direct SOS lookup portals, statutory state filing fees, turnaround times, and formation rules for all 50 states.
               </p>
             </div>
 
@@ -88,9 +96,9 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">USPTO Trademark Protection</h3>
+              <h3 className="text-lg font-bold text-white">USPTO Trademark Clearance</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Integrated USPTO TESS search helper to verify that your chosen mark doesn&apos;t infringe on existing registered federal trademarks.
+                Integrated USPTO guidance and phonetic conflict warnings to protect your brand from costly infringement lawsuits.
               </p>
             </div>
           </div>
@@ -111,13 +119,13 @@ export default function HomePage() {
               href="/llc-search/delaware"
               className="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
             >
-              <span>Explore all 50 states</span>
+              <span>Explore Delaware Guide</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {popularStates.map((state) => (
+            {topStates.map((state) => (
               <Link
                 key={state.slug}
                 href={`/llc-search/${state.slug}`}
@@ -128,17 +136,17 @@ export default function HomePage() {
                     <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
                       {state.name} LLC
                     </h3>
-                    <div className="text-xs text-slate-400 mt-1">{state.agency}</div>
+                    <div className="text-xs text-slate-400 mt-1 line-clamp-1">{state.agencyName}</div>
                   </div>
                   <span className="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 font-mono text-xs font-bold border border-indigo-500/20">
-                    {state.code}
+                    {state.slug.substring(0, 2).toUpperCase()}
                   </span>
                 </div>
 
                 <div className="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-300">
                   <div>
                     <span className="text-slate-500">Filing Fee:</span>{' '}
-                    <span className="font-bold text-emerald-400">{state.fee}</span>
+                    <span className="font-bold text-emerald-400">{state.filingFee}</span>
                   </div>
                   <div className="flex items-center gap-1 text-indigo-400 font-medium group-hover:translate-x-0.5 transition-transform">
                     <span>View Guide</span>
@@ -161,7 +169,7 @@ export default function HomePage() {
                   href={`/llc-search/${s.slug}`}
                   className="px-3 py-1.5 bg-slate-800/60 hover:bg-indigo-900/30 hover:text-indigo-300 hover:border-indigo-500/40 border border-slate-700/50 rounded-lg text-xs text-slate-300 transition-colors"
                 >
-                  {s.name} ({s.code})
+                  {s.name}
                 </Link>
               ))}
             </div>
@@ -204,7 +212,7 @@ export default function HomePage() {
                 How accurate is the live domain check?
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Our checker queries Cloudflare and Google authoritative DNS-over-HTTPS resolvers in real-time. If an A record, AAAA record, or nameserver is present, the domain is confirmed registered.
+                Our checker queries Cloudflare authoritative DNS-over-HTTPS resolvers in real-time. If an A record, AAAA record, or nameserver is present, the domain is confirmed registered. Status 3 (NXDOMAIN) indicates immediate availability.
               </p>
             </div>
           </div>

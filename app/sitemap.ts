@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://brandvault.app';
   const currentDate = new Date();
 
-  // Root homepage
+  // Root and compliance pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/llc-search/${state.slug}`,
     lastModified: currentDate,
     changeFrequency: 'weekly',
-    priority: state.popular ? 0.9 : 0.8,
+    priority: 0.8,
   }));
 
   return [...staticPages, ...statePages];
