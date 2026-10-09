@@ -56,7 +56,7 @@ export default function HomePage() {
 
       {/* Ad slot */}
       <div className="max-w-5xl mx-auto px-4 w-full">
-        <AdBanner slot="1234567890" label="Sponsored Partner" />
+        <AdBanner slot="1000364625" label="Sponsored Partner" />
       </div>
 
       {/* Feature Highlights Grid */}
