@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import Link from 'next/link';
 import Script from 'next/script';
 import './globals.css';
+import { AFFILIATE_LINKS } from '@/lib/affiliates';
 import {
   Vault,
   Search,
@@ -88,7 +89,7 @@ export default function RootLayout({
           <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
           <span>Form your LLC with Northwest Registered Agent ($39 + State Fee)</span>
           <a
-            href="https://www.northwestregisteredagent.com/?aff=brandvault"
+            href={AFFILIATE_LINKS.northwest()}
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="underline text-white hover:text-amber-300 font-semibold transition-colors ml-1"
@@ -137,7 +138,7 @@ export default function RootLayout({
             {/* Header Right Action CTA */}
             <div className="flex items-center gap-3">
               <a
-                href="https://www.northwestregisteredagent.com/?aff=brandvault"
+                href={AFFILIATE_LINKS.northwest()}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-xl text-xs shadow-md shadow-indigo-500/20 transition-all flex items-center gap-1.5"
@@ -222,7 +223,7 @@ export default function RootLayout({
                   </li>
                   <li>
                     <a
-                      href="https://www.namecheap.com/?aff=brandvault"
+                      href={AFFILIATE_LINKS.namecheapHome()}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                       className="hover:text-indigo-400 transition-colors inline-flex items-center gap-1"
@@ -272,6 +273,9 @@ export default function RootLayout({
             <div className="pt-8 border-t border-slate-900 text-xs text-slate-400 space-y-2">
               <p>
                 <strong className="text-slate-400">Disclaimer:</strong> Brand Vault is not an attorney, law firm, or registered agent. We do not provide legal or tax advice. All brand availability results and state statutory data are compiled for informational and planning purposes only.
+              </p>
+              <p>
+                <strong className="text-slate-400">Affiliate Disclosure:</strong> Brand Vault may earn a commission when you purchase through links on this site (e.g., LLC formation or trademark services) — at no extra cost to you. This keeps the checker free.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2 text-[11px] text-slate-400">
                 <span>&copy; 2026 Brand Vault. All rights reserved.</span>
