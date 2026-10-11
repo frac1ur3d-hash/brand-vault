@@ -351,6 +351,36 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
             </div>
           </div>
 
+          {/* LLC + branding CTA: Tailor Brands affiliate (approved 2026-10-11, $50/$150/$250 per LLC plan) */}
+          <div className="relative overflow-hidden bg-gradient-to-r from-rose-950/60 via-slate-900 to-slate-900 border border-rose-500/30 rounded-3xl p-6 md:p-8">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">
+                  <Building2 className="w-3.5 h-3.5" /> Launch the full brand
+                </div>
+                <h3 className="text-xl font-black text-white">
+                  Form your <span className="text-rose-400">{cleanBrand.toUpperCase()} LLC</span> + get your logo &amp; website
+                </h3>
+                <p className="text-sm text-slate-300 max-w-2xl leading-relaxed">
+                  Tailor Brands handles the LLC filing and builds your logo, website, and branding in one place — everything you need to launch.
+                </p>
+              </div>
+              <div className="flex flex-col items-stretch gap-2 shrink-0">
+                <a
+                  href={AFFILIATE_LINKS.tailorBrands()}
+                  target="_blank"
+                  rel={AFFILIATE_REL}
+                  className="px-7 py-4 bg-rose-500 hover:bg-rose-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-rose-500/25 transition-all flex items-center justify-center gap-2 text-sm"
+                >
+                  <Building2 className="w-4 h-4" />
+                  <span>Start My LLC</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <p className="text-[11px] text-slate-500 text-center">I may earn a commission if you purchase through this link.</p>
+              </div>
+            </div>
+          </div>
+
           {/* Section: Domains (DNS over HTTPS live verified) */}
           {(activeTab === 'all' || activeTab === 'domains') && (
             <div className="space-y-4">
