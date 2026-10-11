@@ -25,6 +25,8 @@ import {
 } from 'lucide-react';
 import statesData from '@/data/states.json';
 import AdBanner from '@/components/AdBanner';
+import EmailCapture from '@/components/EmailCapture';
+import { AFFILIATE_LINKS, AFFILIATE_REL } from '@/lib/affiliates';
 
 interface DomainResult {
   tld: string;
@@ -125,7 +127,7 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
       domain: `${brandName}${t.ext}`,
       status: 'checking',
       priceEst: t.price,
-      buyUrl: `https://www.namecheap.com/domains/registration/results/?domain=${brandName}${t.ext}&aff=brandvault`,
+      buyUrl: AFFILIATE_LINKS.namecheapSearch(`${brandName}${t.ext}`),
     }));
     setDomainResults(initDomains);
 
@@ -309,9 +311,9 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
 
               <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
                 <a
-                  href={`https://www.northwestregisteredagent.com/?aff=brandvault&name=${cleanBrand}`}
+                  href={AFFILIATE_LINKS.northwest(cleanBrand)}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel={AFFILIATE_REL}
                   className="w-full sm:w-auto px-7 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/25 transition-all flex items-center justify-center gap-2 text-sm"
                 >
                   <ShoppingBag className="w-4 h-4" />
@@ -319,6 +321,33 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
+            </div>
+          </div>
+
+          {/* Trademark protection CTA: Trademark Engine affiliate */}
+          <div className="relative overflow-hidden bg-gradient-to-r from-amber-950/50 via-slate-900 to-slate-900 border border-amber-500/30 rounded-3xl p-6 md:p-8">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                  <ShieldCheck className="w-3.5 h-3.5" /> Protect the name
+                </div>
+                <h3 className="text-xl font-black text-white">
+                  Name looks clear? <span className="text-amber-400">Lock it down federally.</span>
+                </h3>
+                <p className="text-sm text-slate-300 max-w-2xl leading-relaxed">
+                  A state LLC doesn&apos;t stop anyone in another state from using your name. A federal trademark does. File in minutes.
+                </p>
+              </div>
+              <a
+                href={AFFILIATE_LINKS.trademarkEngine(cleanBrand)}
+                target="_blank"
+                rel={AFFILIATE_REL}
+                className="shrink-0 px-7 py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all flex items-center justify-center gap-2 text-sm"
+              >
+                <ShieldCheck className="w-4 h-4" />
+                <span>File Trademark</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
 
@@ -513,6 +542,9 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
             </div>
           </div>
 
+          {/* Email capture: send-me-the-report */}
+          <EmailCapture variant="report" brandName={cleanBrand} />
+
           {/* Section: 50-State LLC Name Availability Hub */}
           {(activeTab === 'all' || activeTab === 'llc') && (
             <div className="space-y-6">
@@ -611,6 +643,13 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
                   </div>
                 </div>
               </div>
+
+              {/* Email capture: alert-me-if-it-frees-up */}
+              <EmailCapture
+                variant="taken"
+                brandName={cleanBrand}
+                stateName={currentState.name}
+              />
             </div>
           )}
         </div>
