@@ -1,1 +1,289 @@
-aW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gJ25leHQnOwppbXBvcnQgeyBHZWlzdCwgR2Vpc3RfTW9ubyB9IGZyb20gJ25leHQvZm9udC9nb29nbGUnOwppbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnOwppbXBvcnQgU2NyaXB0IGZyb20gJ25leHQvc2NyaXB0JzsKaW1wb3J0ICcuL2dsb2JhbHMuY3NzJzsKaW1wb3J0IHsgQUZGSUxJQVRFX0xJTktTIH0gZnJvbSAnQC9saWIvYWZmaWxpYXRlcyc7CmltcG9ydCB7CiAgVmF1bHQsCiAgU2VhcmNoLAogIEdsb2JlLAogIEJ1aWxkaW5nMiwKICBTaGllbGRDaGVjaywKICBFeHRlcm5hbExpbmssCiAgTGF5ZXJzLAogIFNwYXJrbGVzLAp9IGZyb20gJ2x1Y2lkZS1yZWFjdCc7Cgpjb25zdCBnZWlzdFNhbnMgPSBHZWlzdCh7CiAgdmFyaWFibGU6ICctLWZvbnQtZ2Vpc3Qtc2FucycsCiAgc3Vic2V0czogWydsYXRpbiddLAp9KTsKCmNvbnN0IGdlaXN0TW9ubyA9IEdlaXN0X01vbm8oewogIHZhcmlhYmxlOiAnLS1mb250LWdlaXN0LW1vbm8nLAogIHN1YnNldHM6IFsnbGF0aW4nXSwKfSk7CgpleHBvcnQgY29uc3QgbWV0YWRhdGE6IE1ldGFkYXRhID0gewogIHRpdGxlOiB7CiAgICBkZWZhdWx0OiAnQnJhbmQgVmF1bHQgLSBJbnN0YW50IERvbWFpbiwgU29jaWFsICYgNTAtU3RhdGUgTExDIEF2YWlsYWJpbGl0eSBTZWFyY2gnLAogICAgdGVtcGxhdGU6ICclcyB8IEJyYW5kIFZhdWx0JywKICB9LAogIGRlc2NyaXB0aW9uOgogICAgJ1NlYXJjaCBkb21haW4gbmFtZXMgdmlhIGxpdmUgRE5TL0RvSCwgcHJvYmUgc29jaWFsIG1lZGlhIGhhbmRsZSBhdmFpbGFiaWxpdHksIGFuZCB2ZXJpZnkgYnVzaW5lc3MgZW50aXR5IG5hbWVzIGFjcm9zcyBhbGwgNTAgVVMgU2VjcmV0YXJ5IG9mIFN0YXRlIExMQyByZWdpc3RyaWVzLicsCiAga2V5d29yZHM6IFsKICAgICdicmFuZCBuYW1lIHNlYXJjaCcsCiAgICAnZG9tYWluIGNoZWNrZXInLAogICAgJ2xsYyBhdmFpbGFiaWxpdHknLAogICAgJ3NvY2lhbCBtZWRpYSBoYW5kbGUgY2hlY2tlcicsCiAgICAnNTAgc3RhdGUgbGxjIHNlYXJjaCcsCiAgICAnc2VjcmV0YXJ5IG9mIHN0YXRlIHNlYXJjaCcsCiAgICAndXNwdG8gdHJhZGVtYXJrIHNlYXJjaCcsCiAgICAnc3RhcnQgYW4gbGxjJywKICAgICdkbnMgbG9va3VwJywKICBdLAogIGF1dGhvcnM6IFt7IG5hbWU6ICdCcmFuZCBWYXVsdCBUZWFtJyB9XSwKICBtZXRhZGF0YUJhc2U6IG5ldyBVUkwoJ2h0dHBzOi8vd3d3LmFldGhlcmR5bmFtaWNzLm5ldCcpLAogIG9wZW5HcmFwaDogewogICAgdGl0bGU6ICdCcmFuZCBWYXVsdCAtIEluc3RhbnQgRG9tYWluLCBTb2NpYWwgJiA1MC1TdGF0ZSBMTEMgU2VhcmNoJywKICAgIGRlc2NyaXB0aW9uOgogICAgICAnVGhlIGRldmVsb3BlciBhbmQgZm91bmRlciBlbmdpbmUgdG8gc2VhcmNoIGRvbWFpbnMsIGNoZWNrIHNvY2lhbCBoYW5kbGVzLCBhbmQgYWNjZXNzIDUwLXN0YXRlIExMQyBidXNpbmVzcyByZWdpc3RlcnMgaW5zdGFudGx5LicsCiAgICB1cmw6ICdodHRwczovL3d3dy5hZXRoZXJkeW5hbWljcy5uZXQnLAogICAgc2l0ZU5hbWU6ICdCcmFuZCBWYXVsdCcsCiAgICBsb2NhbGU6ICdlbl9VUycsCiAgICB0eXBlOiAnd2Vic2l0ZScsCiAgfSwKICB0d2l0dGVyOiB7CiAgICBjYXJkOiAnc3VtbWFyeV9sYXJnZV9pbWFnZScsCiAgICB0aXRsZTogJ0JyYW5kIFZhdWx0IC0gSW5zdGFudCBEb21haW4sIFNvY2lhbCAmIExMQyBDaGVja2VyJywKICAgIGRlc2NyaXB0aW9uOiAnQ2hlY2sgZG9tYWlucywgaGFuZGxlcywgYW5kIExMQyBhdmFpbGFiaWxpdHkgaW4gc2Vjb25kcy4nLAogIH0sCiAgcm9ib3RzOiB7CiAgICBpbmRleDogdHJ1ZSwKICAgIGZvbGxvdzogdHJ1ZSwKICB9LAp9OwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUm9vdExheW91dCh7CiAgY2hpbGRyZW4sCn06IFJlYWRvbmx5PHsKICBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlOwp9PikgewogIHJldHVybiAoCiAgICA8aHRtbCBsYW5nPSJlbiIgY2xhc3NOYW1lPXtgJHtnZWlzdFNhbnMudmFyaWFibGV9ICR7Z2Vpc3RNb25vLnZhcmlhYmxlfSBkYXJrYH0+CiAgICAgIDxoZWFkPgogICAgICAgIHsvKiBHb29nbGUgQWRTZW5zZSBTY3JpcHQgTG9hZGVyICovfQogICAgICAgIDxTY3JpcHQKICAgICAgICAgIGlkPSJnb29nbGUtYWRzZW5zZSIKICAgICAgICAgIGFzeW5jCiAgICAgICAgICBzcmM9Imh0dHBzOi8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzP2NsaWVudD1jYS1wdWItODQyODQ3MTY2NzIxOTkyMyIKICAgICAgICAgIGNyb3NzT3JpZ2luPSJhbm9ueW1vdXMiCiAgICAgICAgICBzdHJhdGVneT0iYWZ0ZXJJbnRlcmFjdGl2ZSIKICAgICAgICAvPgogICAgICA8L2hlYWQ+CiAgICAgIDxib2R5IGNsYXNzTmFtZT0iYmctc2xhdGUtOTUwIHRleHQtc2xhdGUtMTAwIGZsZXggZmxleC1jb2wgbWluLWgtc2NyZWVuIGFudGlhbGlhc2VkIHNlbGVjdGlvbjpiZy1pbmRpZ28tNTAwIHNlbGVjdGlvbjp0ZXh0LXdoaXRlIj4KICAgICAgICB7LyogVG9wIE5vdGlmaWNhdGlvbiBBbm5vdW5jZW1lbnQgQmFyICovfQogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJiZy1ncmFkaWVudC10by1yIGZyb20taW5kaWdvLTkwMCB2aWEtcHVycGxlLTkwMCB0by1zbGF0ZS05MDAgYm9yZGVyLWIgYm9yZGVyLWluZGlnby01MDAvMjAgcHktMS41IHB4LTQgdGV4dC1jZW50ZXIgdGV4dC14cyBmb250LW1lZGl1bSB0ZXh0LWluZGlnby0yMDAgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgZ2FwLTIiPgogICAgICAgICAgPFNwYXJrbGVzIGNsYXNzTmFtZT0idy0zLjUgaC0zLjUgdGV4dC1hbWJlci0zMDAgc2hyaW5rLTAiIC8+CiAgICAgICAgICA8c3Bhbj5MYXVuY2ggeW91ciBMTEMgd2l0aCBUYWlsb3IgQnJhbmRzIOKAlCBmaWxpbmcgKyBsb2dvICsgd2Vic2l0ZSBpbiBvbmUgcGxhY2U8L3NwYW4+CiAgICAgICAgICA8YQogICAgICAgICAgICBocmVmPXtBRkZJTElBVEVfTElOS1MudGFpbG9yQnJhbmRzKCl9CiAgICAgICAgICAgIHRhcmdldD0iX2JsYW5rIgogICAgICAgICAgICByZWw9Im5vb3BlbmVyIG5vcmVmZXJyZXIgc3BvbnNvcmVkIgogICAgICAgICAgICBjbGFzc05hbWU9InVuZGVybGluZSB0ZXh0LXdoaXRlIGhvdmVyOnRleHQtYW1iZXItMzAwIGZvbnQtc2VtaWJvbGQgdHJhbnNpdGlvbi1jb2xvcnMgbWwtMSIKICAgICAgICAgID4KICAgICAgICAgICAgU3RhcnQgTXkgTExDICZyYXJyOwogICAgICAgICAgPC9hPgogICAgICAgIDwvZGl2PgoKICAgICAgICB7LyogR2xvYmFsIE5hdmlnYXRpb24gSGVhZGVyICovfQogICAgICAgIDxoZWFkZXIgY2xhc3NOYW1lPSJzdGlja3kgdG9wLTAgei01MCBiZy1zbGF0ZS05NTAvODUgYmFja2Ryb3AtYmx1ci1tZCBib3JkZXItYiBib3JkZXItc2xhdGUtODAwLzgwIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy02eGwgbXgtYXV0byBweC00IGgtMTYgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIj4KICAgICAgICAgICAgey8qIExvZ28gKi99CiAgICAgICAgICAgIDxMaW5rIGhyZWY9Ii8iIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIuNSBncm91cCI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InctOSBoLTkgcm91bmRlZC14bCBiZy1ncmFkaWVudC10by10ciBmcm9tLWluZGlnby02MDAgdmlhLXB1cnBsZS02MDAgdG8tcGluay01MDAgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgdGV4dC13aGl0ZSBzaGFkb3ctbWQgc2hhZG93LWluZGlnby02MDAvMzAgZ3JvdXAtaG92ZXI6c2NhbGUtMTA1IHRyYW5zaXRpb24tdHJhbnNmb3JtIj4KICAgICAgICAgICAgICAgIDxWYXVsdCBjbGFzc05hbWU9InctNSBoLTUiIC8+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZmxleC1jb2wiPgogICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWxnIGZvbnQtYmxhY2sgdHJhY2tpbmctdGlnaHQgdGV4dC13aGl0ZSBncm91cC1ob3Zlcjp0ZXh0LWluZGlnby0zMDAgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgICBCUkFORDxzcGFuIGNsYXNzTmFtZT0idGV4dC1pbmRpZ28tNDAwIj5WQVVMVDwvc3Bhbj4KICAgICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1bMTBweF0gZm9udC1tb25vIHRyYWNraW5nLXdpZGVzdCB0ZXh0LXNsYXRlLTQwMCAtbXQtMSB1cHBlcmNhc2UiPgogICAgICAgICAgICAgICAgICBDbGVhcmFuY2UgU3VpdGUKICAgICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9MaW5rPgoKICAgICAgICAgICAgey8qIERlc2t0b3AgTmF2aWdhdGlvbiBMaW5rcyAqL30KICAgICAgICAgICAgPG5hdiBjbGFzc05hbWU9ImhpZGRlbiBtZDpmbGV4IGl0ZW1zLWNlbnRlciBnYXAtNiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtc2xhdGUtMzAwIj4KICAgICAgICAgICAgICA8TGluayBocmVmPSIvIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtd2hpdGUgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgQnJhbmQgQ2xlYXJhbmNlCiAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICAgIDxMaW5rIGhyZWY9Ii9sbGMtc2VhcmNoL2RlbGF3YXJlIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtd2hpdGUgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgRGVsYXdhcmUgTExDCiAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICAgIDxMaW5rIGhyZWY9Ii9sbGMtc2VhcmNoL3d5b21pbmciIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC13aGl0ZSB0cmFuc2l0aW9uLWNvbG9ycyI+CiAgICAgICAgICAgICAgICBXeW9taW5nIExMQwogICAgICAgICAgICAgIDwvTGluaz4KICAgICAgICAgICAgICA8TGluayBocmVmPSIvbGxjLXNlYXJjaC9jYWxpZm9ybmlhIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtd2hpdGUgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgQ2FsaWZvcm5pYSBMTEMKICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgPExpbmsgaHJlZj0iL2Fib3V0IiBjbGFzc05hbWU9ImhvdmVyOnRleHQtd2hpdGUgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgQWJvdXQKICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgIDwvbmF2PgoKICAgICAgICAgICAgey8qIEhlYWRlciBSaWdodCBBY3Rpb24gQ1RBICovfQogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMiPgogICAgICAgICAgICAgIDxhCiAgICAgICAgICAgICAgICBocmVmPXtBRkZJTElBVEVfTElOS1MudGFpbG9yQnJhbmRzKCl9CiAgICAgICAgICAgICAgICB0YXJnZXQ9Il9ibGFuayIKICAgICAgICAgICAgICAgIHJlbD0ibm9vcGVuZXIgbm9yZWZlcnJlciBzcG9uc29yZWQiCiAgICAgICAgICAgICAgICBjbGFzc05hbWU9InB4LTQgcHktMiBiZy1ncmFkaWVudC10by1yIGZyb20taW5kaWdvLTUwMCB0by1wdXJwbGUtNjAwIGhvdmVyOmZyb20taW5kaWdvLTYwMCBob3Zlcjp0by1wdXJwbGUtNzAwIHRleHQtd2hpdGUgZm9udC1zZW1pYm9sZCByb3VuZGVkLXhsIHRleHQteHMgc2hhZG93LW1kIHNoYWRvdy1pbmRpZ28tNTAwLzIwIHRyYW5zaXRpb24tYWxsIGZsZXggaXRlbXMtY2VudGVyIGdhcC0xLjUiCiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgPEJ1aWxkaW5nMiBjbGFzc05hbWU9InctMy41IGgtMy41IiAvPgogICAgICAgICAgICAgICAgPHNwYW4+U3RhcnQgTXkgTExDPC9zcGFuPgogICAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2hlYWRlcj4KCiAgICAgICAgey8qIFBhZ2UgQ29udGVudCAqL30KICAgICAgICA8bWFpbiBjbGFzc05hbWU9ImZsZXgtMSI+e2NoaWxkcmVufTwvbWFpbj4KCiAgICAgICAgey8qIEdsb2JhbCBGb290ZXIgKi99CiAgICAgICAgPGZvb3RlciBjbGFzc05hbWU9ImJvcmRlci10IGJvcmRlci1zbGF0ZS04MDAvODAgYmctc2xhdGUtOTUwIG10LWF1dG8iPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LTZ4bCBteC1hdXRvIHB4LTQgcHktMTIgc3BhY2UteS04Ij4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTEgbWQ6Z3JpZC1jb2xzLTQgZ2FwLTgiPgogICAgICAgICAgICAgIHsvKiBCcmFuZCBDb2wgKi99CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMyBtZDpjb2wtc3Bhbi0xIj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiI+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ3LTcgaC03IHJvdW5kZWQtbGcgYmctaW5kaWdvLTYwMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0ZXh0LXdoaXRlIj4KICAgICAgICAgICAgICAgICAgICA8VmF1bHQgY2xhc3NOYW1lPSJ3LTQgaC00IiAvPgogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWJhc2UgZm9udC1ibGFjayB0ZXh0LXdoaXRlIj5CUkFORFZBVUxUPC9zcGFuPgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1zbGF0ZS00MDAgbGVhZGluZy1yZWxheGVkIj4KICAgICAgICAgICAgICAgICAgUmVhbC10aW1lIGRvbWFpbiBETlMgaW5zcGVjdGlvbiwgc29jaWFsIGhhbmRsZSBwcm9iZSwgYW5kIDUwLXN0YXRlIFNlY3JldGFyeSBvZiBTdGF0ZSBidXNpbmVzcyBsb29rdXAgZW5naW5lIGZvciBlbnRyZXByZW5ldXJzLgogICAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgICB7LyogU3RhdGUgTExDIEh1YnMgKi99CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiB0ZXh0LXhzIj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmb250LWJvbGQgdGV4dC13aGl0ZSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIiPlRvcCBGb3JtYXRpb24gU3RhdGVzPC9kaXY+CiAgICAgICAgICAgICAgICA8dWwgY2xhc3NOYW1lPSJzcGFjZS15LTEuNSB0ZXh0LXNsYXRlLTQwMCI+CiAgICAgICAgICAgICAgICAgIDxsaT4KICAgICAgICAgICAgICAgICAgICA8TGluayBocmVmPSIvbGxjLXNlYXJjaC9kZWxhd2FyZSIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWluZGlnby00MDAgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgICAgICAgRGVsYXdhcmUgTExDICgkMTEwIGZlZSkKICAgICAgICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAgIDxsaT4KICAgICAgICAgICAgICAgICAgICA8TGluayBocmVmPSIvbGxjLXNlYXJjaC93eW9taW5nIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtaW5kaWdvLTQwMCB0cmFuc2l0aW9uLWNvbG9ycyI+CiAgICAgICAgICAgICAgICAgICAgICBXeW9taW5nIExMQyAoJDEwMCBmZWUpCiAgICAgICAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICAgICAgICA8bGk+CiAgICAgICAgICAgICAgICAgICAgPExpbmsgaHJlZj0iL2xsYy1zZWFyY2gvbmV2YWRhIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtaW5kaWdvLTQwMCB0cmFuc2l0aW9uLWNvbG9ycyI+CiAgICAgICAgICAgICAgICAgICAgICBOZXZhZGEgTExDICgkNDI1IGZlZSkKICAgICAgICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAgIDxsaT4KICAgICAgICAgICAgICAgICAgICA8TGluayBocmVmPSIvbGxjLXNlYXJjaC9jYWxpZm9ybmlhIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtaW5kaWdvLTQwMCB0cmFuc2l0aW9uLWNvbG9ycyI+CiAgICAgICAgICAgICAgICAgICAgICBDYWxpZm9ybmlhIExMQyAoJDcwIGZlZSkKICAgICAgICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAgIDxsaT4KICAgICAgICAgICAgICAgICAgICA8TGluayBocmVmPSIvbGxjLXNlYXJjaC90ZXhhcyIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWluZGlnby00MDAgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgICAgICAgVGV4YXMgTExDICgkMzAwIGZlZSkKICAgICAgICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAgIDxsaT4KICAgICAgICAgICAgICAgICAgICA8TGluayBocmVmPSIvbGxjLXNlYXJjaC9mbG9yaWRhIiBjbGFzc05hbWU9ImhvdmVyOnRleHQtaW5kaWdvLTQwMCB0cmFuc2l0aW9uLWNvbG9ycyI+CiAgICAgICAgICAgICAgICAgICAgICBGbG9yaWRhIExMQyAoJDEyNSBmZWUpCiAgICAgICAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICAgICAgPC91bD4KICAgICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgICAgey8qIFRvb2xzICYgUmVnaXN0cmFycyAqL30KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIHRleHQteHMiPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZvbnQtYm9sZCB0ZXh0LXdoaXRlIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciI+VG9vbHMgJmFtcDsgUmVnaXN0cmFyczwvZGl2PgogICAgICAgICAgICAgICAgPHVsIGNsYXNzTmFtZT0ic3BhY2UteS0xLjUgdGV4dC1zbGF0ZS00MDAiPgogICAgICAgICAgICAgICAgICA8bGk+CiAgICAgICAgICAgICAgICAgICAgPExpbmsgaHJlZj0iLyIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWluZGlnby00MDAgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgICAgICAgTGl2ZSBETlMgLyBEb0ggTG9va3VwCiAgICAgICAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICAgICAgICA8bGk+CiAgICAgICAgICAgICAgICAgICAgPExpbmsgaHJlZj0iLyIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWluZGlnby00MDAgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgICAgICAgU29jaWFsIFVzZXJuYW1lIFByb2JlCiAgICAgICAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICAgICAgICA8bGk+CiAgICAgICAgICAgICAgICAgICAgPGEKICAgICAgICAgICAgICAgICAgICAgIGhyZWY9e0FGRklMSUFURV9MSU5LUy5uYW1lY2hlYXBIb21lKCl9CiAgICAgICAgICAgICAgICAgICAgICB0YXJnZXQ9Il9ibGFuayIKICAgICAgICAgICAgICAgICAgICAgIHJlbD0ibm9vcGVuZXIgbm9yZWZlcnJlciBzcG9uc29yZWQiCiAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9ImhvdmVyOnRleHQtaW5kaWdvLTQwMCB0cmFuc2l0aW9uLWNvbG9ycyBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEiCiAgICAgICAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgICAgICAgPHNwYW4+TmFtZWNoZWFwIERvbWFpbnM8L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICA8RXh0ZXJuYWxMaW5rIGNsYXNzTmFtZT0idy0zIGgtMyIgLz4KICAgICAgICAgICAgICAgICAgICA8L2E+CiAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAgIDxsaT4KICAgICAgICAgICAgICAgICAgICA8YQogICAgICAgICAgICAgICAgICAgICAgaHJlZj0iaHR0cHM6Ly90bXNlYXJjaC51c3B0by5nb3YiCiAgICAgICAgICAgICAgICAgICAgICB0YXJnZXQ9Il9ibGFuayIKICAgICAgICAgICAgICAgICAgICAgIHJlbD0ibm9vcGVuZXIgbm9yZWZlcnJlciIKICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC1pbmRpZ28tNDAwIHRyYW5zaXRpb24tY29sb3JzIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMSIKICAgICAgICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj5VU1BUTyBUcmFkZW1hcmsgVEVTUzwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgIDxFeHRlcm5hbExpbmsgY2xhc3NOYW1lPSJ3LTMgaC0zIiAvPgogICAgICAgICAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgICAgICAgPC9saT4KICAgICAgICAgICAgICAgIDwvdWw+CiAgICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICAgIHsvKiBMZWdhbCAmIENvbXBsaWFuY2UgKi99CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiB0ZXh0LXhzIj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmb250LWJvbGQgdGV4dC13aGl0ZSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIiPkNvbXBsaWFuY2UgJmFtcDsgTGVnYWw8L2Rpdj4KICAgICAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9InNwYWNlLXktMS41IHRleHQtc2xhdGUtNDAwIj4KICAgICAgICAgICAgICAgICAgPGxpPgogICAgICAgICAgICAgICAgICAgIDxMaW5rIGhyZWY9Ii9hYm91dCIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWluZGlnby00MDAgdHJhbnNpdGlvbi1jb2xvcnMiPgogICAgICAgICAgICAgICAgICAgICAgQWJvdXQgQnJhbmQgVmF1bHQKICAgICAgICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAgIDxsaT4KICAgICAgICAgICAgICAgICAgICA8TGluayBocmVmPSIvcHJpdmFjeS1wb2xpY3kiIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC1pbmRpZ28tNDAwIHRyYW5zaXRpb24tY29sb3JzIj4KICAgICAgICAgICAgICAgICAgICAgIFByaXZhY3kgUG9saWN5ICZhbXA7IENvb2tpZXMKICAgICAgICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAgIDxsaT4KICAgICAgICAgICAgICAgICAgICA8TGluayBocmVmPSIvdGVybXMiIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC1pbmRpZ28tNDAwIHRyYW5zaXRpb24tY29sb3JzIj4KICAgICAgICAgICAgICAgICAgICAgIFRlcm1zIG9mIFNlcnZpY2UgJmFtcDsgRGlzY2xhaW1lcgogICAgICAgICAgICAgICAgICAgIDwvTGluaz4KICAgICAgICAgICAgICAgICAgPC9saT4KICAgICAgICAgICAgICAgIDwvdWw+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgey8qIEJvdHRvbSBCYXIgJiBMZWdhbCBEaXNjbGFpbWVyICovfQogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icHQtOCBib3JkZXItdCBib3JkZXItc2xhdGUtOTAwIHRleHQteHMgdGV4dC1zbGF0ZS00MDAgc3BhY2UteS0yIj4KICAgICAgICAgICAgICA8cD4KICAgICAgICAgICAgICAgIDxzdHJvbmcgY2xhc3NOYW1lPSJ0ZXh0LXNsYXRlLTQwMCI+RGlzY2xhaW1lcjo8L3N0cm9uZz4gQnJhbmQgVmF1bHQgaXMgbm90IGFuIGF0dG9ybmV5LCBsYXcgZmlybSwgb3IgcmVnaXN0ZXJlZCBhZ2VudC4gV2UgZG8gbm90IHByb3ZpZGUgbGVnYWwgb3IgdGF4IGFkdmljZS4gQWxsIGJyYW5kIGF2YWlsYWJpbGl0eSByZXN1bHRzIGFuZCBzdGF0ZSBzdGF0dXRvcnkgZGF0YSBhcmUgY29tcGlsZWQgZm9yIGluZm9ybWF0aW9uYWwgYW5kIHBsYW5uaW5nIHB1cnBvc2VzIG9ubHkuCiAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgIDxwPgogICAgICAgICAgICAgICAgPHN0cm9uZyBjbGFzc05hbWU9InRleHQtc2xhdGUtNDAwIj5BZmZpbGlhdGUgRGlzY2xvc3VyZTo8L3N0cm9uZz4gQnJhbmQgVmF1bHQgbWF5IGVhcm4gYSBjb21taXNzaW9uIHdoZW4geW91IHB1cmNoYXNlIHRocm91Z2ggbGlua3Mgb24gdGhpcyBzaXRlIChlLmcuLCBMTEMgZm9ybWF0aW9uIG9yIHRyYWRlbWFyayBzZXJ2aWNlcykg4oCUIGF0IG5vIGV4dHJhIGNvc3QgdG8geW91LiBUaGlzIGtlZXBzIHRoZSBjaGVja2VyIGZyZWUuCiAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIHNtOmZsZXgtcm93IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTIgcHQtMiB0ZXh0LVsxMXB4XSB0ZXh0LXNsYXRlLTQwMCI+CiAgICAgICAgICAgICAgICA8c3Bhbj4mY29weTsgMjAyNiBCcmFuZCBWYXVsdC4gQWxsIHJpZ2h0cyByZXNlcnZlZC48L3NwYW4+CiAgICAgICAgICAgICAgICA8c3Bhbj5DcmFmdGVkIGZvciBmb3VuZGVycywgY3JlYXRvcnMsIGFuZCBpbmRpZSBidWlsZGVycy48L3NwYW4+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9mb290ZXI+CiAgICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICApOwp9Cg==
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import Link from 'next/link';
+import Script from 'next/script';
+import './globals.css';
+import { AFFILIATE_LINKS } from '@/lib/affiliates';
+import {
+  Vault,
+  Search,
+  Globe,
+  Building2,
+  ShieldCheck,
+  ExternalLink,
+  Layers,
+  Sparkles,
+} from 'lucide-react';
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Brand Vault - Instant Domain, Social & 50-State LLC Availability Search',
+    template: '%s | Brand Vault',
+  },
+  description:
+    'Search domain names via live DNS/DoH, probe social media handle availability, and verify business entity names across all 50 US Secretary of State LLC registries.',
+  keywords: [
+    'brand name search',
+    'domain checker',
+    'llc availability',
+    'social media handle checker',
+    '50 state llc search',
+    'secretary of state search',
+    'uspto trademark search',
+    'start an llc',
+    'dns lookup',
+  ],
+  authors: [{ name: 'Brand Vault Team' }],
+  metadataBase: new URL('https://www.aetherdynamics.net'),
+  openGraph: {
+    title: 'Brand Vault - Instant Domain, Social & 50-State LLC Search',
+    description:
+      'The developer and founder engine to search domains, check social handles, and access 50-state LLC business registers instantly.',
+    url: 'https://www.aetherdynamics.net',
+    siteName: 'Brand Vault',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brand Vault - Instant Domain, Social & LLC Checker',
+    description: 'Check domains, handles, and LLC availability in seconds.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`}>
+      <head>
+        {/* Google AdSense Script Loader */}
+        <Script
+          id="google-adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8428471667219923"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
+      <body className="bg-slate-950 text-slate-100 flex flex-col min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
+        {/* Top Notification Announcement Bar */}
+        <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 border-b border-indigo-500/20 py-1.5 px-4 text-center text-xs font-medium text-indigo-200 flex items-center justify-center gap-2">
+          <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+          <span>Launch your LLC with Tailor Brands — filing + logo + website in one place</span>
+          <a
+            href={AFFILIATE_LINKS.tailorBrands()}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="underline text-white hover:text-amber-300 font-semibold transition-colors ml-1"
+          >
+            Start My LLC &rarr;
+          </a>
+        </div>
+
+        {/* Global Navigation Header */}
+        <header className="sticky top-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
+          <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center text-white shadow-md shadow-indigo-600/30 group-hover:scale-105 transition-transform">
+                <Vault className="w-5 h-5" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-lg font-black tracking-tight text-white group-hover:text-indigo-300 transition-colors">
+                  BRAND<span className="text-indigo-400">VAULT</span>
+                </span>
+                <span className="text-[10px] font-mono tracking-widest text-slate-400 -mt-1 uppercase">
+                  Clearance Suite
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation Links */}
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+              <Link href="/" className="hover:text-white transition-colors">
+                Brand Clearance
+              </Link>
+              <Link href="/llc-search/delaware" className="hover:text-white transition-colors">
+                Delaware LLC
+              </Link>
+              <Link href="/llc-search/wyoming" className="hover:text-white transition-colors">
+                Wyoming LLC
+              </Link>
+              <Link href="/llc-search/california" className="hover:text-white transition-colors">
+                California LLC
+              </Link>
+              <Link href="/about" className="hover:text-white transition-colors">
+                About
+              </Link>
+            </nav>
+
+            {/* Header Right Action CTA */}
+            <div className="flex items-center gap-3">
+              <a
+                href={AFFILIATE_LINKS.tailorBrands()}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-xl text-xs shadow-md shadow-indigo-500/20 transition-all flex items-center gap-1.5"
+              >
+                <Building2 className="w-3.5 h-3.5" />
+                <span>Start My LLC</span>
+              </a>
+            </div>
+          </div>
+        </header>
+
+        {/* Page Content */}
+        <main className="flex-1">{children}</main>
+
+        {/* Global Footer */}
+        <footer className="border-t border-slate-800/80 bg-slate-950 mt-auto">
+          <div className="max-w-6xl mx-auto px-4 py-12 space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {/* Brand Col */}
+              <div className="space-y-3 md:col-span-1">
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
+                    <Vault className="w-4 h-4" />
+                  </div>
+                  <span className="text-base font-black text-white">BRANDVAULT</span>
+                </div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Real-time domain DNS inspection, social handle probe, and 50-state Secretary of State business lookup engine for entrepreneurs.
+                </p>
+              </div>
+
+              {/* State LLC Hubs */}
+              <div className="space-y-2 text-xs">
+                <div className="font-bold text-white uppercase tracking-wider">Top Formation States</div>
+                <ul className="space-y-1.5 text-slate-400">
+                  <li>
+                    <Link href="/llc-search/delaware" className="hover:text-indigo-400 transition-colors">
+                      Delaware LLC ($110 fee)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/llc-search/wyoming" className="hover:text-indigo-400 transition-colors">
+                      Wyoming LLC ($100 fee)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/llc-search/nevada" className="hover:text-indigo-400 transition-colors">
+                      Nevada LLC ($425 fee)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/llc-search/california" className="hover:text-indigo-400 transition-colors">
+                      California LLC ($70 fee)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/llc-search/texas" className="hover:text-indigo-400 transition-colors">
+                      Texas LLC ($300 fee)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/llc-search/florida" className="hover:text-indigo-400 transition-colors">
+                      Florida LLC ($125 fee)
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Tools & Registrars */}
+              <div className="space-y-2 text-xs">
+                <div className="font-bold text-white uppercase tracking-wider">Tools &amp; Registrars</div>
+                <ul className="space-y-1.5 text-slate-400">
+                  <li>
+                    <Link href="/" className="hover:text-indigo-400 transition-colors">
+                      Live DNS / DoH Lookup
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="hover:text-indigo-400 transition-colors">
+                      Social Username Probe
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      href={AFFILIATE_LINKS.namecheapHome()}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="hover:text-indigo-400 transition-colors inline-flex items-center gap-1"
+                    >
+                      <span>Namecheap Domains</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://tmsearch.uspto.gov"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-indigo-400 transition-colors inline-flex items-center gap-1"
+                    >
+                      <span>USPTO Trademark TESS</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Legal & Compliance */}
+              <div className="space-y-2 text-xs">
+                <div className="font-bold text-white uppercase tracking-wider">Compliance &amp; Legal</div>
+                <ul className="space-y-1.5 text-slate-400">
+                  <li>
+                    <Link href="/about" className="hover:text-indigo-400 transition-colors">
+                      About Brand Vault
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/privacy-policy" className="hover:text-indigo-400 transition-colors">
+                      Privacy Policy &amp; Cookies
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/terms" className="hover:text-indigo-400 transition-colors">
+                      Terms of Service &amp; Disclaimer
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Bottom Bar & Legal Disclaimer */}
+            <div className="pt-8 border-t border-slate-900 text-xs text-slate-400 space-y-2">
+              <p>
+                <strong className="text-slate-400">Disclaimer:</strong> Brand Vault is not an attorney, law firm, or registered agent. We do not provide legal or tax advice. All brand availability results and state statutory data are compiled for informational and planning purposes only.
+              </p>
+              <p>
+                <strong className="text-slate-400">Affiliate Disclosure:</strong> Brand Vault may earn a commission when you purchase through links on this site (e.g., LLC formation or trademark services) — at no extra cost to you. This keeps the checker free.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2 text-[11px] text-slate-400">
+                <span>&copy; 2026 Brand Vault. All rights reserved.</span>
+                <span>Crafted for founders, creators, and indie builders.</span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>
+  );
+}
