@@ -45,12 +45,12 @@ export const metadata: Metadata = {
     'dns lookup',
   ],
   authors: [{ name: 'Brand Vault Team' }],
-  metadataBase: new URL('https://brandvault.app'),
+  metadataBase: new URL('https://www.aetherdynamics.net'),
   openGraph: {
     title: 'Brand Vault - Instant Domain, Social & 50-State LLC Search',
     description:
       'The developer and founder engine to search domains, check social handles, and access 50-state LLC business registers instantly.',
-    url: 'https://brandvault.app',
+    url: 'https://www.aetherdynamics.net',
     siteName: 'Brand Vault',
     locale: 'en_US',
     type: 'website',
