@@ -46,9 +46,11 @@ export const AFFILIATE_LINKS = {
   /**
    * Tailor Brands — $50/$150/$250 per LLC plan (Lite/Essential/Elite)
    * via the Tailor Brands Partners Program. Approved 2026-10-11.
+   *
+   * Cloaked: site buttons use '/go/tailorbrands' (same domain, cleaner URL).
+   * The real tracking URL below is the redirect destination in next.config.ts.
    */
-  tailorBrands: (): string =>
-    'https://tailorbrands.go2cloud.org/aff_c?offer_id=90&aff_id=10182',
+  tailorBrands: (): string => '/go/tailorbrands',
 
   /**
    * Bizee (Incfile) — tiered $15–$175 via Awin.
@@ -74,6 +76,10 @@ export const AFFILIATE_LINKS = {
   /** Namecheap homepage (footer link). TODO: replace with tracking link. */
   namecheapHome: (): string => 'https://www.namecheap.com/?aff=brandvault',
 };
+
+/** Real tracking destinations for cloaked /go/* affiliate links. */
+export const TAILOR_BRANDS_TRACKING_URL =
+  'https://tailorbrands.go2cloud.org/aff_c?offer_id=90&aff_id=10182';
 
 /** Standard rel attribute for all affiliate/outbound money links. */
 export const AFFILIATE_REL = 'noopener noreferrer sponsored';
