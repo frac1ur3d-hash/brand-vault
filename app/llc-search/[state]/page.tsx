@@ -46,12 +46,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${state.name} LLC Name Search & Entity Availability (${state.filingFee} Fee) | Brand Vault`,
     description: `Official ${state.name} LLC name search, business entity registry links, ${state.agencyName} filing fees (${state.filingFee}), turnaround times (${state.turnaroundTime}), and naming requirements.`,
     alternates: {
-      canonical: `https://brandvault.app/llc-search/${state.slug}`,
+      canonical: `https://www.aetherdynamics.net/llc-search/${state.slug}`,
     },
     openGraph: {
       title: `${state.name} LLC Name Search & Entity Availability`,
       description: `Verify ${state.name} LLC business name availability with ${state.agencyName}. Statutory fee: ${state.filingFee}. Turnaround: ${state.turnaroundTime}.`,
-      url: `https://brandvault.app/llc-search/${state.slug}`,
+      url: `https://www.aetherdynamics.net/llc-search/${state.slug}`,
       type: 'article',
     },
   };
@@ -68,8 +68,65 @@ export default async function StateLLCPage({ params }: Props) {
   // Neighbor/alternate states
   const otherStates = statesData.filter((s) => s.slug !== state.slug).slice(0, 6);
 
+  // Per-state FAQ (visible content + JSON-LD schema)
+  const faqs = [
+    {
+      q: `How much does it cost to form an LLC in ${state.name}?`,
+      a: `The ${state.agencyName} charges a ${state.filingFee} filing fee for Articles of Organization. Most founders also budget for a registered agent and optional expedited processing.`,
+    },
+    {
+      q: `How long does it take to get an LLC approved in ${state.name}?`,
+      a: `Standard processing time is ${state.turnaroundTime}. Online filings are typically the fastest option.`,
+    },
+    {
+      q: `What are the LLC naming requirements in ${state.name}?`,
+      a: state.nameRequirements,
+    },
+    {
+      q: `Does ${state.name} require a registered agent for an LLC?`,
+      a: `Yes. ${state.name} requires every LLC to maintain a registered agent with a physical street address in the state (P.O. boxes are not accepted) to receive legal documents during business hours.`,
+    },
+    {
+      q: `What annual reports or fees does a ${state.name} LLC owe?`,
+      a: `Ongoing compliance costs ${state.annualFee}. Missing the filing deadline can trigger late fees or administrative dissolution, so calendar it.`,
+    },
+    {
+      q: `Where do I officially file my ${state.name} LLC?`,
+      a: `File directly with the ${state.agencyName} through their official business entity portal. Always verify name availability in the state registry before filing.`,
+    },
+  ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.aetherdynamics.net/' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: `${state.name} LLC Name Search`,
+        item: `https://www.aetherdynamics.net/llc-search/${state.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen py-10 px-4 max-w-6xl mx-auto space-y-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Breadcrumb navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-400">
         <Link href="/" className="hover:text-white transition-colors">
@@ -349,6 +406,28 @@ export default async function StateLLCPage({ params }: Props) {
 
       {/* In-Article Bottom Ad Placement */}
       <AdBanner slot="6789012345" label="Sponsored Resource" />
+
+      {/* State FAQ (matches FAQPage schema above) */}
+      <section className="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4">
+        <div>
+          <h2 className="text-xl sm:text-2xl font-bold text-white">{state.name} LLC — Frequently Asked Questions</h2>
+          <p className="text-xs text-slate-400">Quick answers on cost, timing, naming rules, and compliance.</p>
+        </div>
+        <div className="space-y-3">
+          {faqs.map((f) => (
+            <details
+              key={f.q}
+              className="group p-4 rounded-2xl bg-slate-950/60 border border-slate-800 open:border-indigo-500/40 transition-colors"
+            >
+              <summary className="cursor-pointer font-semibold text-white text-sm list-none flex items-center justify-between gap-3">
+                <span>{f.q}</span>
+                <ChevronRight className="w-4 h-4 text-indigo-400 shrink-0 transition-transform group-open:rotate-90" />
+              </summary>
+              <p className="text-sm text-slate-300 leading-relaxed mt-3">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
 
       {/* Explore Other States Grid */}
       <section className="space-y-4">
