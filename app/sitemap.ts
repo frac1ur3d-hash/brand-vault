@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import statesData from '@/data/states.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://brandvault.app';
+  const baseUrl = 'https://www.aetherdynamics.net';
   const currentDate = new Date();
 
   // Root and compliance pages
