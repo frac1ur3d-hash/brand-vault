@@ -44,10 +44,11 @@ export const AFFILIATE_LINKS = {
   zenbusiness: (): string => 'https://www.zenbusiness.com/?aff=brandvault',
 
   /**
-   * Tailor Brands — $50/$150/$250 tiers via Awin.
-   * TODO: replace with your Awin tracking link.
+   * Tailor Brands — $50/$150/$250 per LLC plan (Lite/Essential/Elite)
+   * via the Tailor Brands Partners Program. Approved 2026-10-11.
    */
-  tailorBrands: (): string => 'https://www.tailorbrands.com/?aff=brandvault',
+  tailorBrands: (): string =>
+    'https://tailorbrands.go2cloud.org/aff_c?offer_id=90&aff_id=10182',
 
   /**
    * Bizee (Incfile) — tiered $15–$175 via Awin.
