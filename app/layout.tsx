@@ -14,6 +14,7 @@ import {
   Layers,
   Sparkles,
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -283,6 +284,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
