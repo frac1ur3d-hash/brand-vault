@@ -36,10 +36,11 @@ export const AFFILIATE_LINKS = {
    * Tailor Brands — $50/$150/$250 per LLC plan (Lite/Essential/Elite)
    * via the Tailor Brands Partners Program. Approved 2026-10-11.
    *
-   * Cloaked: site buttons use '/go/tailorbrands' (same domain, cleaner URL).
-   * The real tracking URL below is the redirect destination in next.config.ts.
+   * Cloaked: site buttons use '/start' (bridge page, also the Google Ads
+   * conversion page) which auto-redirects to the tracking URL below.
+   * '/go/tailorbrands' (307 in next.config.ts) remains as a fallback.
    */
-  tailorBrands: (): string => '/go/tailorbrands',
+  tailorBrands: (): string => '/start',
 
   /**
    * Bizee (Incfile) — tiered $15–$175 via Awin.
