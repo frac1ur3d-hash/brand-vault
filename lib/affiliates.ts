@@ -72,6 +72,13 @@ export const AFFILIATE_LINKS = {
     'https://www.jdoqocy.com/click-101901434-16995515',
 
   /**
+   * LawDepot Articles of Incorporation deep link (same CJ program).
+   * For corporation filers — reserved for future use.
+   */
+  lawdepotArticlesOfIncorporation: (): string =>
+    'https://www.anrdoezrs.net/click-101901434-16995439',
+
+  /**
    * Namecheap domain search — 20% on domains via Impact/CJ/ShareASale.
    * TEMP 2026-10-11: pointing at Tailor Brands (live earner) until a real
    * domain-affiliate link exists. Swap back when it lands.
