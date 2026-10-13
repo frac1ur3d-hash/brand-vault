@@ -57,6 +57,21 @@ export const AFFILIATE_LINKS = {
   legalzoom: (): string => '/go/tailorbrands',
 
   /**
+   * LawDepot — $6.50/free trial, 25% of paid subscriptions via CJ Affiliate.
+   * Approved 2026-10-13. Legal documents: Articles of Organization,
+   * Operating Agreement, and other LLC paperwork templates.
+   */
+  lawdepot: (): string =>
+    'https://www.kqzyfj.com/click-101901434-16995795',
+
+  /**
+   * LawDepot LLC Operating Agreement deep link (same CJ program).
+   * Reserved for future use (e.g. LLC formation package docs).
+   */
+  lawdepotOperatingAgreement: (): string =>
+    'https://www.jdoqocy.com/click-101901434-16995515',
+
+  /**
    * Namecheap domain search — 20% on domains via Impact/CJ/ShareASale.
    * TEMP 2026-10-11: pointing at Tailor Brands (live earner) until a real
    * domain-affiliate link exists. Swap back when it lands.

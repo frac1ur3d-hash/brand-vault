@@ -22,6 +22,7 @@ import {
   Flame,
   Check,
   AlertTriangle,
+  FileText,
 } from 'lucide-react';
 import statesData from '@/data/states.json';
 import AdBanner from '@/components/AdBanner';
@@ -378,6 +379,36 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
                 <span>File Trademark</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
+            </div>
+          </div>
+
+          {/* Legal documents CTA: LawDepot affiliate */}
+          <div className="relative overflow-hidden bg-gradient-to-r from-sky-950/50 via-slate-900 to-slate-900 border border-sky-500/30 rounded-3xl p-6 md:p-8">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                  <FileText className="w-3.5 h-3.5" /> Get the paperwork right
+                </div>
+                <h3 className="text-xl font-black text-white">
+                  LLC formed? <span className="text-sky-400">Get your legal documents.</span>
+                </h3>
+                <p className="text-sm text-slate-300 max-w-2xl leading-relaxed">
+                  Articles of Organization, Operating Agreement, and every other form your LLC needs — attorney-drafted templates you can customize in minutes.
+                </p>
+              </div>
+              <div className="flex flex-col items-stretch gap-2 shrink-0">
+                <a
+                  href={AFFILIATE_LINKS.lawdepot()}
+                  target="_blank"
+                  rel={AFFILIATE_REL}
+                  className="px-7 py-4 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-sky-500/25 transition-all flex items-center justify-center gap-2 text-sm"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Get Legal Documents</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <p className="text-[11px] text-slate-500 text-center">I may earn a commission if you purchase through this link.</p>
+              </div>
             </div>
           </div>
 
