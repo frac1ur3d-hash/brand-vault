@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useTransition } from 'react';
+import React, { useState, useEffect, useRef, useTransition } from 'react';
 import {
   Search,
   Globe,
@@ -13,6 +13,7 @@ import {
   AlertCircle,
   Loader2,
   Copy,
+  Dices,
   Sparkles,
   ArrowRight,
   RefreshCw,
@@ -28,6 +29,8 @@ import statesData from '@/data/states.json';
 import AdBanner from '@/components/AdBanner';
 import EmailCapture from '@/components/EmailCapture';
 import { AFFILIATE_LINKS, AFFILIATE_REL } from '@/lib/affiliates';
+import { fireConfetti } from './confetti';
+import { scoreBrand, type BrandScoreBreakdown } from '@/lib/brandScore';
 
 interface DomainResult {
   tld: string;
@@ -73,6 +76,16 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
 
   const [domainResults, setDomainResults] = useState<DomainResult[]>([]);
   const [socialResults, setSocialResults] = useState<SocialResult[]>([]);
+
+  // Fun layer: brand score, confetti, and the name slot machine
+  const [brandScore, setBrandScore] = useState<BrandScoreBreakdown | null>(null);
+  const [displayScore, setDisplayScore] = useState(0);
+  const [spinning, setSpinning] = useState(false);
+  const [spinIdeas, setSpinIdeas] = useState<string[]>([]);
+  const [spinDisplay, setSpinDisplay] = useState('');
+  const searchSeqRef = useRef(0);
+  const celebratedRef = useRef(-1);
+  const searchedBrandRef = useRef('');
 
   // Query Cloudflare DNS-over-HTTPS (DoH)
   const performDohLookup = async (domain: string): Promise<'available' | 'taken' | 'unknown'> => {
@@ -123,6 +136,11 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
     setIsSearching(true);
     setHasSearched(true);
 
+    // New search: bump the sequence, stash the brand, clear the previous score.
+    searchSeqRef.current += 1;
+    searchedBrandRef.current = brandName;
+    setBrandScore(null);
+
     const initDomains: DomainResult[] = coreTlds.map((t) => ({
       tld: t.ext,
       domain: `${brandName}${t.ext}`,
@@ -169,6 +187,79 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // When every domain + social probe has resolved for the current search,
+  // compute the Brand Score once and fire confetti if anything is available.
+  useEffect(() => {
+    if (!hasSearched) return;
+    const all = [...domainResults, ...socialResults];
+    if (all.length === 0) return;
+    if (all.some((r) => r.status === 'checking')) return;
+    if (celebratedRef.current === searchSeqRef.current) return;
+    celebratedRef.current = searchSeqRef.current;
+
+    const name = searchedBrandRef.current;
+    const availableCount = all.filter((r) => r.status === 'available').length;
+    setBrandScore(scoreBrand(name, availableCount, all.length));
+
+    if (availableCount > 0) {
+      const t = setTimeout(() => fireConfetti(), 350);
+      return () => clearTimeout(t);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [domainResults, socialResults, hasSearched]);
+
+  // Animate the score meter from 0 up to the computed score.
+  useEffect(() => {
+    if (!brandScore) {
+      setDisplayScore(0);
+      return;
+    }
+    const target = brandScore.score;
+    const durationMs = 1200;
+    const start = performance.now();
+    let raf = 0;
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - start) / durationMs);
+      const eased = 1 - Math.pow(1 - t, 3);
+      setDisplayScore(Math.round(target * eased));
+      if (t < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [brandScore]);
+
+  // --- Name idea slot machine -------------------------------------------
+  const NAME_PREFIXES = ['Swift', 'Nova', 'Peak', 'Bright', 'True', 'Bold', 'Aero', 'Lumen'];
+  const NAME_SUFFIXES = ['ly', 'ify', 'hub', 'labs', 'forge', 'stack', 'wise', 'loop', 'ora', 'ship'];
+
+  const randomName = () =>
+    (
+      NAME_PREFIXES[Math.floor(Math.random() * NAME_PREFIXES.length)] +
+      NAME_SUFFIXES[Math.floor(Math.random() * NAME_SUFFIXES.length)]
+    ).toLowerCase();
+
+  const spinNames = () => {
+    if (spinning) return;
+    const ideas = new Set<string>();
+    while (ideas.size < 3) ideas.add(randomName());
+    const finalIdeas = Array.from(ideas);
+    const winner = finalIdeas[Math.floor(Math.random() * finalIdeas.length)];
+
+    setSpinning(true);
+    setSpinIdeas([]);
+    const started = Date.now();
+    const interval = setInterval(() => {
+      setSpinDisplay(randomName());
+      if (Date.now() - started >= 1000) {
+        clearInterval(interval);
+        setSpinning(false);
+        setSpinDisplay('');
+        setSpinIdeas(finalIdeas);
+        setQuery(winner);
+      }
+    }, 70);
+  };
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -224,6 +315,39 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
             )}
           </button>
         </form>
+
+        {/* Name idea slot machine */}
+        <div className="mt-3 flex flex-wrap items-center gap-2 px-2">
+          <button
+            type="button"
+            onClick={spinNames}
+            disabled={spinning}
+            className="flex items-center justify-center gap-2 min-w-[240px] px-4 py-2 bg-gradient-to-r from-amber-500/20 to-pink-500/20 hover:from-amber-500/30 hover:to-pink-500/30 border border-amber-500/40 hover:border-amber-400/60 text-amber-200 rounded-xl text-sm font-semibold transition-all cursor-pointer disabled:opacity-80"
+          >
+            <Dices className={`w-4 h-4 shrink-0 ${spinning ? 'animate-spin' : ''}`} />
+            <span className="font-mono truncate">
+              {spinning ? spinDisplay || '···' : "Don't have a name yet? Spin for ideas 🎰"}
+            </span>
+          </button>
+          {!spinning && spinIdeas.length > 0 && (
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs text-slate-500">tap one to check it:</span>
+              {spinIdeas.map((idea) => (
+                <button
+                  key={idea}
+                  type="button"
+                  onClick={() => {
+                    setQuery(idea);
+                    handleSearch(idea);
+                  }}
+                  className="px-2.5 py-1 bg-slate-800/60 hover:bg-indigo-900/40 hover:text-indigo-300 border border-slate-700/60 hover:border-indigo-500/40 rounded-lg transition-colors cursor-pointer font-mono text-xs text-slate-300"
+                >
+                  {idea}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
 
         {/* Popular Quick Suggestions */}
         <div className="mt-3 pt-3 border-t border-slate-800 flex flex-wrap items-center gap-2 text-xs text-slate-400 px-2">
@@ -295,6 +419,73 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
       {/* Main Results Container */}
       {hasSearched && (
         <div className="mt-8 space-y-8">
+          {/* Brand Strength Score */}
+          {brandScore && (
+            <div className="relative overflow-hidden bg-slate-900/90 border border-indigo-500/30 rounded-3xl p-6 md:p-8 shadow-2xl shadow-indigo-950/40">
+              <div className="flex flex-col md:flex-row md:items-center gap-6">
+                <div className="flex-1 space-y-4 min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <Sparkles className="w-5 h-5 text-indigo-400" />
+                    <h3 className="text-lg font-black text-white">Brand Strength Score</h3>
+                    <span className="text-xs text-slate-400 font-mono">&ldquo;{brandScore.name}&rdquo;</span>
+                  </div>
+
+                  {/* Animated meter */}
+                  <div className="h-4 rounded-full bg-slate-800 overflow-hidden border border-slate-700/60">
+                    <div
+                      className={`h-full rounded-full bg-gradient-to-r ${brandScore.tier.gradient}`}
+                      style={{ width: `${displayScore}%` }}
+                    />
+                  </div>
+
+                  {/* Sub-score breakdown */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    {[
+                      { label: 'Name length', value: brandScore.lengthScore, max: 30 },
+                      { label: 'Pronounceability', value: brandScore.pronounceScore, max: 20 },
+                      { label: 'Availability', value: brandScore.availabilityScore, max: 35 },
+                      { label: 'Clean & simple', value: brandScore.cleanBonus, max: 15 },
+                    ].map((s) => (
+                      <div
+                        key={s.label}
+                        className="bg-slate-800/60 border border-slate-700/60 rounded-xl px-3 py-2"
+                      >
+                        <div className="flex items-center justify-between text-[11px]">
+                          <span className="text-slate-400">{s.label}</span>
+                          <span className="text-slate-200 font-bold font-mono">
+                            {s.value}/{s.max}
+                          </span>
+                        </div>
+                        <div className="mt-1.5 h-1.5 rounded-full bg-slate-700 overflow-hidden">
+                          <div
+                            className="h-full rounded-full bg-indigo-400"
+                            style={{ width: `${Math.round((s.value / s.max) * 100)}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-xs text-slate-400">
+                    {brandScore.availableCount} of {brandScore.totalCount} domains &amp; handles
+                    available
+                  </p>
+                </div>
+
+                <div className="text-center md:text-right shrink-0 md:pl-6 md:border-l md:border-slate-800">
+                  <div className="text-6xl font-black text-white tabular-nums">{displayScore}</div>
+                  <div className="text-xs text-slate-500 font-medium">/ 100</div>
+                  <div className="mt-3 text-base font-bold text-white">
+                    {brandScore.tier.emoji} {brandScore.tier.label}
+                  </div>
+                  <p className="text-xs text-slate-400 mt-1 max-w-[260px] md:ml-auto">
+                    {brandScore.tier.verdict}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* LLC + branding CTA: Tailor Brands affiliate (approved 2026-10-11, $50/$150/$250 per LLC plan) */}
           <div className="relative overflow-hidden bg-gradient-to-r from-rose-950/60 via-slate-900 to-slate-900 border border-rose-500/30 rounded-3xl p-6 md:p-8">
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
