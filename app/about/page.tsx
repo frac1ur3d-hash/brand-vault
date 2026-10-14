@@ -64,6 +64,14 @@ export default function AboutPage() {
         </p>
       </div>
 
+      {/* Founder Section */}
+      <div className="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 space-y-3">
+        <h2 className="text-xl font-bold text-white">Built by Kyle Alexander McLeod</h2>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Author of <em>The Anunnaki Chronicles</em>, builder of games and tools. When he&apos;s not shipping, he&apos;s panhandling on Powell in Portland to fund the dream. Rags to riches, documented live.
+        </p>
+      </div>
+
       <div className="pt-4 text-center">
         <Link
           href="/"
