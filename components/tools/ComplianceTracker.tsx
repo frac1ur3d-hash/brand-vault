@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { BellRing, ExternalLink, CalendarPlus, AlertTriangle, CheckCircle2 } from 'lucide-react';
 import deadlines from '@/data/compliance-deadlines.json';
 
@@ -27,11 +27,10 @@ function monthDayFromRule(rule: string): { month: number; day: number } | null {
   return { month: MONTHS[m[1].toLowerCase()], day: Math.min(parseInt(m[2], 10), 28) };
 }
 
-function nextDueDate(d: Deadline, formationISO: string): { date: Date; confident: boolean } | null {
+function nextDueDate(d: Deadline, formationISO: string, now: Date): { date: Date; confident: boolean } | null {
   const rule = d.dueRule;
   if (/no annual report|not required|N\/A/i.test(d.reportName) || /^n\/a/i.test(rule)) return null;
 
-  const now = new Date();
   const isBiennial = /biennial|every two years/i.test(rule);
   const isAnniversary = /anniversary/i.test(rule);
   const interval = isBiennial ? 2 : 1;
@@ -101,14 +100,20 @@ function downloadICS(title: string, date: Date, description: string) {
 export default function ComplianceTracker() {
   const [slug, setSlug] = useState('oregon');
   const [formation, setFormation] = useState('');
+  // The clock is read on the client only — evaluating `new Date()` during the
+  // static prerender breaks the production build.
+  const [now, setNow] = useState<Date | null>(null);
+  useEffect(() => {
+    setNow(new Date());
+  }, []);
 
   const data = useMemo(
     () => (deadlines as Deadline[]).find((d) => d.slug === slug) ?? (deadlines as Deadline[])[0],
     [slug]
   );
 
-  const due = useMemo(() => nextDueDate(data, formation), [data, formation]);
-  const noReport = due === null;
+  const due = useMemo(() => (now ? nextDueDate(data, formation, now) : null), [data, formation, now]);
+  const noReport = now !== null && due === null;
 
   return (
     <div className="p-6 sm:p-8 rounded-3xl bg-slate-900/60 border border-slate-800 space-y-6">
@@ -154,7 +159,11 @@ export default function ComplianceTracker() {
         </div>
       </div>
 
-      {noReport ? (
+      {now === null ? (
+        <div className="p-5 rounded-2xl bg-slate-800/40 border border-slate-700/50 text-sm text-slate-400">
+          Loading deadline calculator…
+        </div>
+      ) : noReport ? (
         <div className="p-5 rounded-2xl bg-emerald-950/30 border border-emerald-500/30 flex gap-3">
           <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
           <div>

@@ -618,7 +618,6 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
                 <span className="text-xs text-slate-400">Live authoritative resolution</span>
               </div>
               <p className="text-[11px] text-slate-500">Domain purchase links may earn us a commission at no extra cost to you.</p>
-              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {domainResults.map((item) => (
