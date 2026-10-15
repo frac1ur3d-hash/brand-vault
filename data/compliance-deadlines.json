@@ -1,0 +1,452 @@
+[
+  {
+    "dueRule": "Due the same date as the corresponding federal income tax return — March 15 for calendar-year LLCs (LLCs/S-corps/disregarded entities); April 15 for C-corps",
+    "fee": "$100+ (calculated on Alabama net worth x graduated rate; entities with calculated tax of $100 or less owe nothing and file nothing — fully exempt since tax year 2024)",
+    "filingUrl": "https://www.revenue.alabama.gov/individual-corporate/alabama-business-privilege-tax-and-corporate-share-tax/",
+    "latePenalty": "Late filing: 10% of tax shown due or $50, whichever is greater (per official TY2025 Form PPT instructions, Code of Ala. 40-2A-11). Late payment: 1% of tax due per month, capped at 25%, plus interest.",
+    "notes": "Alabama has NO separate SOS annual report for LLCs — the BPT return doubles as the annual report (filed with Dept. of Revenue, not SOS). MAJOR CHANGE: Act 2022-252 grants a full exemption for tax years beginning after 12/31/2023 — an LLC whose calculated privilege tax is $100 or less is NOT required to file at all (the old '$100 minimum' no longer applies). Initial return (Form BPT-IN) due within 2.5 months of formation. E-filing is via My Alabama Taxes.",
+    "reportName": "Business Privilege Tax Return and Annual Report for Pass-Through Entities (Form PPT)",
+    "slug": "alabama"
+  },
+  {
+    "dueRule": "Due by January 2 every two years (formed in an even year → due in even years; odd year → odd years); filing window opens 3 months prior",
+    "fee": "$100 (domestic LLC; foreign LLCs $200)",
+    "filingUrl": "https://www.commerce.alaska.gov/web/cbpl/corporations/biennialreports.aspx",
+    "latePenalty": "$37.50 late fee if not filed by February 1. If delinquent 6 months, the commissioner may involuntarily dissolve the LLC (written notice + 60 days to contest, AS 10.50.408).",
+    "notes": "All domestic LLCs also file a free Initial Report within 6 months of formation. Biennial Report required even with zero income/activity. Online filing posts immediately (Visa/Mastercard).",
+    "reportName": "Biennial Report",
+    "slug": "alaska"
+  },
+  {
+    "dueRule": "N/A — LLCs are not required to file annual reports; per the ACC's official Business Services FAQ only corporations file annual reports",
+    "fee": "$0",
+    "filingUrl": "https://azcc.gov/corporations/",
+    "latePenalty": "N/A for reports; LLCs can face administrative dissolution for failing to maintain a statutory agent or keep business info current",
+    "notes": "Arizona LLCs file NOTHING on a recurring schedule — no annual/biennial report and no recurring report fee. (The ACC discussed a voluntary one-click existence attestation for LLCs with 2+ years of no filings; as of Aug 2026 it was still 'coming soon,' not mandatory.) Filing authority is the Arizona Corporation Commission (ACC), not the SOS.",
+    "reportName": "None — LLCs have no annual report in Arizona",
+    "slug": "arizona"
+  },
+  {
+    "dueRule": "On or before May 1 each year (for the tax year ending the prior December 31)",
+    "fee": "$150 (flat for LLC/PLLC, domestic or foreign)",
+    "filingUrl": "https://www.sos.arkansas.gov/business-commercial-services-bcs/franchise-tax-report-forms",
+    "latePenalty": "$25 late filing penalty + daily interest (0.000274/day, ~10%/yr) on tax and penalty from the first day late, per the official 2026 form. Unpaid reports → loss of good standing and possible revocation of authorization to do business; delinquent entities cannot make other SOS filings.",
+    "notes": "No extensions — Arkansas eliminated them in 1991. Online filing adds a $5.00 credit-card processing fee. First report due the calendar year after formation.",
+    "reportName": "Annual Franchise Tax Report",
+    "slug": "arkansas"
+  },
+  {
+    "dueRule": "Within 90 days of formation, then biennially within the 6-month filing window (formation month plus the 5 preceding months)",
+    "fee": "$20",
+    "filingUrl": "https://bizfileonline.sos.ca.gov/",
+    "latePenalty": "$250 penalty assessed and collected by the Franchise Tax Board for a late SOI (Corp. Code 17713.07(b)); continued nonfiling can lead to SOS suspension/forfeiture",
+    "notes": "SEPARATE from the SOI: every CA LLC pays the Franchise Tax Board an annual $800 tax (annual tax equal to the $800 minimum franchise tax), due April 15 for calendar-year filers — even at $0 revenue or inactive. LLCs file the SOI biennially; corporations file annually ($25). Effective 8/1/2026, online SOI filings require User Access established in bizfile.",
+    "reportName": "Statement of Information",
+    "slug": "california"
+  },
+  {
+    "dueRule": "Annually within a 5-month window: the entity's Periodic Report month ± 2 months (report month = formation month, shown on entity Summary page); due by the last day of the 2nd month after the report month",
+    "fee": "$25 (raised from $10 on July 1, 2024)",
+    "filingUrl": "https://www.coloradosos.gov/",
+    "latePenalty": "Late fee assessed on late filing (current SOS fee schedule: $50) and status drops to Noncompliant; Noncompliant 60 days → Delinquent; delinquent entities can lose authority to do business",
+    "notes": "Colorado is online-only for periodic reports. FEE CHANGED: official SOS news release confirms the fee rose from $10 to $25 effective 7/1/2024 — old '$10' figures are stale. Report month is tied to the month the entity registered.",
+    "reportName": "Periodic Report",
+    "slug": "colorado"
+  },
+  {
+    "dueRule": "January 1 – March 31 each year (starting the calendar year after formation)",
+    "fee": "$80 (online only — paper annual reports are not accepted)",
+    "filingUrl": "https://business.ct.gov/knowledge-base/articles/domestic-limited-liability-companies-forms-and-fees",
+    "latePenalty": "No late fee is listed by the state; an overdue report blocks issuance of a Certificate of Legal Existence, and an LLC in default for more than a year can be dissolved by forfeiture",
+    "notes": "Connecticut LLCs file ONLY online via a Business.CT.gov account. No financial information is required. The old $250 Business Entity Tax was repealed effective 2020.",
+    "reportName": "Annual Report",
+    "slug": "connecticut"
+  },
+  {
+    "dueRule": "On or before June 1 each year, for the prior calendar year (no proration; due if the entity was active at any point Jan 1–Dec 31 of the tax year)",
+    "fee": "$400 (raised from $300)",
+    "filingUrl": "https://corp.delaware.gov/alt-entitytaxinstructions/",
+    "latePenalty": "$200 penalty + 1.5% interest per month on tax and penalty; nonpayment can eventually void the LLC's charter",
+    "notes": "Delaware LLCs do NOT file an annual report — this is a flat tax, not a report (unlike Delaware corporations, which file an annual report + franchise tax due March 1). FEE CHANGED: the Division of Corporations' current official instructions list $400, up from the historic $300.",
+    "reportName": "Annual Tax (Alternative Entity Tax) — LLCs file NO annual report",
+    "slug": "delaware"
+  },
+  {
+    "dueRule": "January 1 – May 1 each year, starting the calendar year after formation/registration",
+    "fee": "$138.75",
+    "filingUrl": "http://dos.fl.gov/sunbiz/manage-business/efile/annual-report",
+    "latePenalty": "$400 late fee added after May 1 (cannot be waived or abated). No report by the third Friday of September → administrative dissolution effective the fourth Friday of September; reinstatement requires a reinstatement filing + all back fees.",
+    "notes": "File ONLY at Sunbiz.org (the Division of Corporations' official site — beware lookalike sites). An LLC formed mid-year owes its first report the following calendar year.",
+    "reportName": "Annual Report",
+    "slug": "florida"
+  },
+  {
+    "dueRule": "January 1 – April 1 each year (starting the year after formation); may be filed up to 3 years in advance",
+    "fee": "$60",
+    "filingUrl": "https://ecorp.sos.ga.gov/",
+    "latePenalty": "$25 late filing penalty; failure to timely file can lead to administrative dissolution or revocation of authority to transact business",
+    "notes": "The official SOS fee table lists $60.00 (the old '$50' figure is stale — the $60 is the $50 fee plus a $10 service charge, billed as a single $60 line). One Click Annual Registration allows filing without login if nothing changed and the entity is current on all fees.",
+    "reportName": "Annual Registration",
+    "slug": "georgia"
+  },
+  {
+    "dueRule": "Annually, during the calendar quarter containing the LLC's registration anniversary; due by midnight HST on the last day of that quarter (Mar 31 / Jun 30 / Sep 30 / Dec 31).",
+    "fee": "$12.50",
+    "filingUrl": "https://hbe.ehawaii.gov/annuals",
+    "latePenalty": "$10 late fee per year delinquent; continued failure to file can lead to administrative dissolution.",
+    "notes": "Hawaii DCCA BREG uses a quarterly filing cycle tied to the registration date, not an anniversary month. Official DCCA press releases (incl. July 1, 2026) list the online LLC fee as $12.50; paper filings are $15. File online at Hawaii Business Express.",
+    "reportName": "Annual Business Report",
+    "slug": "hawaii"
+  },
+  {
+    "dueRule": "Annually, due by the end of the LLC's registration anniversary month (Idaho Code 30-21-213).",
+    "fee": "$0",
+    "filingUrl": "https://sosbiz.idaho.gov/forms/new/379",
+    "latePenalty": "No late fee; failure to file the annual report (or loss of registered agent) can lead to administrative dissolution/termination of registration after 60 days' notice (Idaho Code 30-21-511).",
+    "notes": "Idaho's annual report is free (filed online via SOSbiz); paper filing incurs Idaho's standard $20 manual processing fee. No report is required during the first year after incorporation (per Harbor Compliance summary of ID Code 30-21-213).",
+    "reportName": "Annual Report",
+    "slug": "idaho"
+  },
+  {
+    "dueRule": "Annually, due before the first day of the LLC's anniversary month (the month the LLC was approved by the Secretary of State); may be filed up to 45 days early.",
+    "fee": "$75",
+    "filingUrl": "https://www.ilsos.gov/departments/business-services/annual-reports/llc-instructions.html",
+    "latePenalty": "$100 penalty added once the report is late (805 ILCS 180/50-15; penalty amount per state statute as reported in 2026 analyses); administrative dissolution if left unfiled long enough (~180 days late).",
+    "notes": "Illinois SOS Business Services portal accepts online filing for standard annual reports; LLCs with changes to name/duration/purpose/agent, more than 8 managers, or in dissolved status must file by mail on Form LLC-50.1.",
+    "reportName": "Annual Report",
+    "slug": "illinois"
+  },
+  {
+    "dueRule": "Biennial (every 2 years), due during the anniversary month of the LLC's formation or grant of authority to do business; late after the last day of that month. Cycle follows formation-year parity in practice (odd formation year files in odd years).",
+    "fee": "$32",
+    "filingUrl": "https://inbiz.in.gov",
+    "latePenalty": "No statutory late fee reported; failure to file can lead to administrative dissolution. (Late-fee amount unverified — mark before launch.)",
+    "notes": "File via INBiz, Indiana's one-stop portal (login required). Online fee $32 for for-profit entities ($22 nonprofits); paper Form 48725 costs $50. The older dataset's '$50' was the paper fee.",
+    "reportName": "Business Entity Report",
+    "slug": "indiana"
+  },
+  {
+    "dueRule": "Biennial: LLCs file in odd-numbered years, between January 1 and April 1.",
+    "fee": "$30",
+    "filingUrl": "https://filings.sos.iowa.gov",
+    "latePenalty": "No statutory late fee; an unfiled report places the LLC in delinquent status and it can be administratively dissolved.",
+    "notes": "Official Iowa SOS fee: $30 online via Fast Track Filing, $45 by paper. Corporations file in even years ($60); nonprofits file in odd years with no fee. Iowa uses fixed odd/even-year cycles, not anniversary months.",
+    "reportName": "Biennial Report",
+    "slug": "iowa"
+  },
+  {
+    "dueRule": "Biennial: businesses formed in even years file in each even year; formed in odd years file in each odd year. For-profit LLCs due by April 15 of the filing year.",
+    "fee": "$90",
+    "filingUrl": "https://www.sos.ks.gov/businesses/information-reports.html",
+    "latePenalty": "No fines or late fees; a three-month delinquency period follows the due date, after which the business is forfeited and must reinstate (with penalties) to file anything else.",
+    "notes": "Kansas replaced the Annual Report with the biennial Information Report (2021 HB 2391, effective for reports due on/after Jan 1, 2024) — the old dataset's '$50 annual report' is outdated. Current official Form ILC (Rev. 1/23/26): $90 online / $110 paper. Nonprofits due June 15 of their filing year.",
+    "reportName": "Business Entity Information Report",
+    "slug": "kansas"
+  },
+  {
+    "dueRule": "Annually, due by June 30 of each year after the year the entity was formed (file anytime Jan 1 - Jun 30).",
+    "fee": "$15",
+    "filingUrl": "https://www.sos.ky.gov/bus/business-filings/Pages/default.aspx",
+    "latePenalty": "No separate late fee; failure to file by June 30 puts the entity in bad standing and can lead to administrative dissolution or revocation of authority (reinstatement fees apply to restore).",
+    "notes": "Flat $15 annual report fee across all entity types. First report is due the calendar year after formation.",
+    "reportName": "Annual Report",
+    "slug": "kentucky"
+  },
+  {
+    "dueRule": "Annually, due on or before the anniversary of the LLC's formation/registration date each year.",
+    "fee": "$35",
+    "filingUrl": "https://geauxBIZ.sos.la.gov",
+    "latePenalty": "No late fee; a tardy report alone does not dissolve the LLC, but failure to file for three consecutive years can lead to administrative dissolution. Reinstatement costs $95 plus $35 per outstanding report (official fee schedule).",
+    "notes": "Official SOS fee schedule (sos.la.gov) lists Annual Reports at $35, effective Oct 1, 2026 (raised from $30). File via geauxBIZ, the official Louisiana SOS portal.",
+    "reportName": "Annual Report",
+    "slug": "louisiana"
+  },
+  {
+    "dueRule": "Annually, due between January 1 and June 1 each year (legal filing deadline June 1), starting the year after formation.",
+    "fee": "$85",
+    "filingUrl": "https://www.maine.gov/sos/corporations-commissions/incorporating-resources/corporations-commissions/filing-requirement-reminders",
+    "latePenalty": "Late filing penalty assessed when the report is not received by the deadline ($50 reported by 2026 fee analyses citing the SOS fee schedule); failure to pay the penalty leads to administrative dissolution or revocation.",
+    "notes": "Official SOS page confirms $85 for domestic business entities, $150 for foreign entities, $35 for nonprofits. File online via Annual Reports Online (SOSonline.org). Maine sends no paper reminder — email reminders only if an email is on file.",
+    "reportName": "Annual Report",
+    "slug": "maine"
+  },
+  {
+    "dueRule": "Annually, due April 15 for every entity that existed on January 1 of that year (first report due April 15 of the year after formation); free extension to June 15 available online.",
+    "fee": "$300",
+    "filingUrl": "https://egov.maryland.gov/BusinessExpress",
+    "latePenalty": "Late filing penalties start at $30 (Tax-Property 14-704); after a written demand and 30 days, SDAT may forfeit the entity's right to do business (C&A 4A-1013). Unfiled returns also draw estimated personal-property assessments up to 2x value, and the entity loses good standing.",
+    "notes": "Filed with SDAT (not the Secretary of State) via Maryland Business Express. The $300 fee is for the annual report; the Personal Property Return itself has no fee, and it doubles as the property-tax assessment form. Extension to June 15 is free; late-penalty amount sourced from statute via 2026 analysis, SDAT confirms penalties exist.",
+    "reportName": "Annual Report and Business Personal Property Return (Form 1)",
+    "slug": "maryland"
+  },
+  {
+    "dueRule": "On or before the anniversary date of the filing of the original Certificate of Organization, annually",
+    "fee": "$500",
+    "filingUrl": "https://www.sec.state.ma.us/divisions/corporations/filing-by-subject/limited-liability/corporations-limited-liability-company.htm",
+    "latePenalty": "No statutory late fee found; failure to file can lead to administrative dissolution. Reinstatement costs $100 plus all owed annual reports ($500 each).",
+    "notes": "Massachusetts charges $500 for both formation and the annual report - among the highest in the US. The online filing portal (corp.sec.state.ma.us) did not render in text fetch; this official info page contains the File Online links and was confirmed live.",
+    "reportName": "Annual Report",
+    "slug": "massachusetts"
+  },
+  {
+    "dueRule": "February 15 each year after organization/qualification. An LLC formed after September 30 is not required to file on February 15 of the year immediately succeeding its formation.",
+    "fee": "$25",
+    "filingUrl": "https://michigan.gov/lara/bureau-list/cscl/corps/michigan-business-roadmap/annual-reports-and-annual-statements",
+    "latePenalty": "$50 penalty fee if received after the February 15 due date. Failure to file for 2 years results in dissolution, revocation, or not-in-good-standing status.",
+    "notes": "Official name is 'Annual Statement', not 'Annual Report'. Filed with LARA's Corporations Division (the business entity office), not the vehicle-licensing Secretary of State branch. Online filing for the cycle opens October 15. The direct filing link (www.michigan.gov/corpfileonline) redirects to the MiBusiness Registry Portal but was blocked to text fetch; this official guidance page links to it and was confirmed live.",
+    "reportName": "Annual Statement",
+    "slug": "michigan"
+  },
+  {
+    "dueRule": "December 31 of each calendar year, beginning in the calendar year following the calendar year in which the Articles of Organization were filed",
+    "fee": "$0",
+    "filingUrl": "https://mblsportal.sos.mn.gov",
+    "latePenalty": "Failure to file by December 31 results in administrative termination of the LLC (Minn. Stat. 322C.0208). Reinstatement requires filing the missed renewal; reinstatement fee figures not confirmed on accessible official pages.",
+    "notes": "Statute is explicit: 'no fee is required to file an annual renewal' (Minn. Stat. 322C.0208). Filed via the official Minnesota Business & Lien System portal, confirmed live.",
+    "reportName": "Annual Renewal",
+    "slug": "minnesota"
+  },
+  {
+    "dueRule": "File any time on or after January 1 and due by April 15 each year",
+    "fee": "$0",
+    "filingUrl": "https://www.sos.ms.gov/business-services/annual-reports",
+    "latePenalty": "Failure to file the Annual Report may result in administrative dissolution. No late fee published on the official page. (Foreign LLCs pay $250 for the same report; domestic is free.)",
+    "notes": "Online-only filing; paper annual reports are not accepted. The Secretary of State explicitly warns that domestic LLC annual reports are free - ignore third-party solicitation mailers claiming otherwise. Reinstatement fee of $50 cited by secondary sources, unverified.",
+    "reportName": "Annual Report",
+    "slug": "mississippi"
+  },
+  {
+    "dueRule": "No annual report required",
+    "fee": "$0",
+    "filingUrl": "http://www.sos.mo.gov/business/faqs.asp",
+    "latePenalty": "N/A - no report exists, so no late penalty. (Missouri corporations DO file annual registration reports; LLCs are exempt. LLCs must still maintain a registered agent/office on record.)",
+    "notes": "Verified via the official Missouri SOS FAQ, Limited Liability Companies section, Q7: 'Do limited liability companies have to file an annual report? No.' There is no recurring SOS filing or fee to maintain a Missouri LLC.",
+    "reportName": "None - Missouri LLCs are not required to file an annual report",
+    "slug": "missouri"
+  },
+  {
+    "dueRule": "January 1 - April 15 each year; first report due in the Jan 1-Apr 15 window of the year after the calendar year of formation",
+    "fee": "$0 (waived for on-time filings 2024-2027; statutory fee $20)",
+    "filingUrl": "https://biz.sosmt.gov",
+    "latePenalty": "On-time filing is $0 (fee waived for 2024, 2025, 2026 and announced for 2027). Late filing after April 15 reportedly costs $35 per the SOS fee schedule - could not verify directly (fee schedule page blocked to text fetch).",
+    "notes": "The older '$20 annual report' figure is outdated: Secretary of State Christi Jacobsen waived the annual report fee for all businesses filing January 1 - April 15 in 2024, 2025, 2026 and 2027 (official SOS announcement, confirmed). Online-only filing via biz.sosmt.gov, confirmed live.",
+    "reportName": "Annual Report",
+    "slug": "montana"
+  },
+  {
+    "dueRule": "Every odd-numbered year, between January 1 and April 1 (delinquent after June 16)",
+    "fee": "$10 ($13 online including a $3 portal fee)",
+    "filingUrl": "https://sos.nebraska.gov/business-services/annualbiennial-reporting",
+    "latePenalty": "If the biennial report is not filed by the June 16 delinquency date, the LLC will be administratively dissolved (domestic) or have its authority revoked (foreign).",
+    "notes": "Biennial (every 2 years, odd-numbered years), not annual. First report due January 1 - April 1 of the odd-numbered year following the formation year. Nebraska charges $10; online payment adds a $3 portal fee (total $13 online). Reinstatement fees not confirmed on accessible official pages.",
+    "reportName": "Biennial Report",
+    "slug": "nebraska"
+  },
+  {
+    "dueRule": "Annually, on or before the last day of the month in which the LLC's formation anniversary falls",
+    "fee": "$350 ($150 Annual List + $200 State Business License renewal)",
+    "filingUrl": "https://www.nvsos.gov",
+    "latePenalty": "$75 late penalty on the Annual List (NRS 86.272) plus $100 late penalty on the business license (NRS 76.130) = $175 total; continued failure can lead to default status and revocation/dissolution.",
+    "notes": "Two filings, one deadline: Annual List of Managers/Members ($150) plus State Business License renewal ($200) = $350 total. Since June 2022 these filings are online-only via the SilverFlume portal (nvsilverflume.gov), which timed out in text fetch and could not be independently verified; nvsos.gov (the official SOS site, confirmed live) links to it. Fees corroborated by official NVSOS form instructions and Nevada statutes (NRS 76.100/76.130, 86.263, 86.272).",
+    "reportName": "Annual List of Managers or Members (plus State Business License renewal)",
+    "slug": "nevada"
+  },
+  {
+    "dueRule": "January 1 - April 1 each year, beginning in the calendar year following the year of registration",
+    "fee": "$100 ($102 online incl. $2 handling charge)",
+    "filingUrl": "https://www.sos.nh.gov/",
+    "latePenalty": "$50 late fee assessed for reports/fees received after April 1. Failure to file the current year's report results in 'Administratively Suspended' status; continued non-filing leads to administrative dissolution.",
+    "notes": "Per RSA 5:10-a every fee paid electronically carries a $2 handling charge, so online filing costs $102 vs $100 by mail. First report due in the calendar year after formation. Filings are made through NH QuickStart (the portal itself was blocked to text fetch; sos.nh.gov, the official NH SOS site, was confirmed live and links to it).",
+    "reportName": "Annual Report",
+    "slug": "new-hampshire"
+  },
+  {
+    "dueRule": "Due by the last day of the formation anniversary month each year",
+    "fee": "$75 (+$3 credit card or $0.50 e-check service fee online)",
+    "filingUrl": "https://www.njportal.com/DOR/AnnualReports/",
+    "latePenalty": "No stated dollar late fee; entities that fail to file can be revoked. Reinstatement of a revoked LLC costs $75 plus all outstanding annual reports plus a $20 tax clearance certificate (required if revoked more than 2 years).",
+    "notes": "Filed with the Division of Revenue and Enterprise Services (DORES, Dept. of Treasury), not the Secretary of State. The deadline follows the formation month (last day of the anniversary month); this rule is corroborated by official-state-checked sources, though the accessible FAQ text does not spell out the deadline. Free filing reminders available via gov2go. Official fee and revocation/reinstatement rules confirmed on the live state filing portal.",
+    "reportName": "Annual Report",
+    "slug": "new-jersey"
+  },
+  {
+    "dueRule": "None — New Mexico LLCs file no periodic report with the Secretary of State",
+    "fee": "$0",
+    "filingUrl": "https://www.sos.state.nm.us/business-services/",
+    "latePenalty": "None — no periodic filing exists to be late on; LLC revocation grounds under NMSA 53-19-66.1 relate to failure to maintain a registered agent, not a missed report",
+    "notes": "Verified via the NMSA 53-19-63 LLC fee schedule, which prices every SOS LLC filing (articles $50, amendments $50, etc.) and contains no report line; the Corporate Reports Act (NMSA 53-5) applies only to corporations. Corporations file biennial reports ($25) and nonprofits file annual reports ($10), but LLCs have none. Ongoing obligation sits with the Taxation and Revenue Dept (gross receipts tax). Portal: SOS Enterprise (enterprise.sos.nm.gov, JS app — not text-fetchable).",
+    "reportName": "None (no annual report for LLCs)",
+    "slug": "new-mexico"
+  },
+  {
+    "dueRule": "Every two years, during the calendar month in which the Articles of Organization (domestic) or Application for Authority (foreign) was filed with the Department of State",
+    "fee": "$9",
+    "filingUrl": "https://filing.dos.ny.gov/eBiennialWeb/",
+    "latePenalty": "No late fee stated on the Department of State site; the entity is shown as 'past due' in DOS records and on Certificates of Status, which may prevent completion of certain business transactions",
+    "notes": "Per DOS official biennial-statement page (dos.ny.gov/node/16341), citing LLC Law Section 301(e). Note (i) NY publication requirement for new LLCs: LLC Law Section 206 — publish articles in two newspapers for six consecutive weeks; file Certificate of Publication ($50 fee) within 120 days; failure suspends authority to transact business. Note (ii) separate NY Tax Dept annual filing fee on Form IT-204-LL, based on NY-source gross income for the preceding tax year: $25 (up to $100K) / $50 / $175 / $500 / $1,500 / $3,000 / $4,500 (over $25M); disregarded-entity LLCs with NY-source income pay $25 flat; due the 15th day of the 3rd month after the tax year; no extension (tax.ny.gov/pit/efile/annual_filing_fee.htm, updated Jan 31, 2025).",
+    "reportName": "Biennial Statement",
+    "slug": "new-york"
+  },
+  {
+    "dueRule": "On or before April 15 each year, beginning the year following the creation year (first report due April 15 of the year after the articles take effect)",
+    "fee": "$200",
+    "filingUrl": "https://www.sosnc.gov/",
+    "latePenalty": "No late fee stated on the SOS site; failure to file is grounds for administrative dissolution of the LLC (N.C.G.S. Section 57C-6-03); the entity must also maintain a registered agent",
+    "notes": "Per the official SOS Annual Report Filing Manual and Business Registration Manual (sosnc.gov). Report is required 'as long as the entity is in existence' (dissolution filings end the obligation). Paper filings accepted; electronic filing via the yellow 'File your Business Annual Report' button on the SOS homepage. Note: applies to LLCs/L3Cs and foreign LLCs; PLLCs and other entities have separate rules.",
+    "reportName": "Annual Report",
+    "slug": "north-carolina"
+  },
+  {
+    "dueRule": "On or before November 15 each year; the first annual report is due in the year following the calendar year the business was first registered (farming/ranching LLCs: April 15)",
+    "fee": "$50",
+    "filingUrl": "https://firststop.sos.nd.gov",
+    "latePenalty": "Late filing fee incurred after the deadline (NDCC 10-32.1-92); business placed in Not Good Standing; typically involuntarily terminated if the past-due report is not filed within 6 to 12 months of Not Good Standing status; reinstatement window of 1 year, after which the business is involuntarily dissolved/terminated",
+    "notes": "Per official SOS 'Maintain Registration' page (sos.nd.gov/business/business-services/maintain-registration) and LLC business-structures page (annual report fee $50 domestic and foreign). Filed through the FirstStop portal. Note: the FirstStop homepage shows the current cycle's hard cutoff as November 16, 2026 (reports must be received on/before the deadline). New 2027 rule: professional entities (PLLCs) must attach a Certificate of Professional License (SFN 13610) with the annual report starting Jan 1, 2027.",
+    "reportName": "Annual Report",
+    "slug": "north-dakota"
+  },
+  {
+    "dueRule": "None — Ohio LLCs and corporations file no annual report with the Secretary of State",
+    "fee": "$0",
+    "filingUrl": "https://www.ohiosos.gov/business/ohio-business-roadmap/frequently-asked-questions",
+    "latePenalty": "None — no periodic report exists to be late on",
+    "notes": "Official Ohio SOS business FAQ: 'Regular reporting requirements exist only for certain entities' — biennial filings for professional associations and LLPs, Statements/Certificates of Continued Existence for nonprofit corporations, and periodic renewals for trade/fictitious names and marks. LLCs only file on changes (statutory agent, amendments) or dissolution. The SOS scam-warning page likewise states 'Ohio businesses are not required to file annual reports.'",
+    "reportName": "None (no annual report)",
+    "slug": "ohio"
+  },
+  {
+    "dueRule": "Annually, by the anniversary date of the LLC's registration with the Secretary of State; may be filed up to 60 days before the due date",
+    "fee": "$25",
+    "filingUrl": "https://www.sos.ok.gov",
+    "latePenalty": "No late fee. Loss of good standing after 60 days; dissolution or revocation of the LLC after 3 years without filing (18 OK Stat Section 2055(2)); reinstatement requires filing every missed annual certificate at $25 each",
+    "notes": "Oklahoma calls the filing an 'Annual Certificate,' not an annual report. Online filing via 'File Annual Certificates Electronically' under Most Requested Info on the SOS homepage (banner on sos.ok.gov confirms online filing of LLC/LP annual certificates and reinstatements). Paper filing: Annual Certificate form + $25 check payable to Oklahoma Secretary of State. Online payment carries a 4% service charge per third-party fee schedules; the SOS form itself lists $25.",
+    "reportName": "Annual Certificate",
+    "slug": "oklahoma"
+  },
+  {
+    "dueRule": "Each year, on the anniversary date of the original filing (SOS sends a renewal notice about 45 days in advance)",
+    "fee": "$100",
+    "filingUrl": "https://sos.oregon.gov/business/pages/obr-annual-report-renewal.aspx",
+    "latePenalty": "No separate late fee published on the SOS site; failure to file results in administrative dissolution of the LLC; reinstatement requires a reinstatement application plus the missed annual fee(s), available online if the business was dissolved less than 5 years and the name is still available",
+    "notes": "Per official SOS annual-report/renewal page ('All other business entity types renew every year... due on the anniversary date of the original filing') and the official SOS 'Reinstate a Business' page (administrative dissolution for failure to file an annual report). $100 domestic LLC renewal per the SOS Business Registry fee schedule and an official Oregon legislative committee background doc noting fees 'range from $50 for Assumed Business Name and nonprofits to $100 for most Oregon for-profit registrations and renewals' (ORS 56.140). Foreign LLCs: $275. File via the Oregon Business Registry.",
+    "reportName": "Annual Report or Renewal",
+    "slug": "oregon"
+  },
+  {
+    "dueRule": "January 1 – September 30 each year for LLCs (domestic and foreign); the first report is due the year after formation or registration",
+    "fee": "$7",
+    "filingUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/annual-reports",
+    "latePenalty": "No separate late fee; beginning with annual reports due in 2027, failure to file subjects the association to administrative dissolution, termination, or cancellation six months after the due date (name becomes available to others during dissolution)",
+    "notes": "CORRECTION vs old dataset: the fee is $7, not $70 — $70 was the OLD decennial-report fee charged once per 10 years; Act 122 of 2022 replaced the decennial report with an annual report starting in 2025. Official PA DOS annual-reports page. Transition period: no dissolution enforcement until the 2027 cycle. Online filing at file.dos.pa.gov (BFS portal; that portal 403s on text fetch — live use confirmed via the DOS program page that links to it). Corporations file Jan 1 – Jun 30; LPs/LLPs/business trusts/professional associations Jan 1 – Dec 31. Reports may be updated during the reporting year at no extra charge.",
+    "reportName": "Annual Report",
+    "slug": "pennsylvania"
+  },
+  {
+    "dueRule": "February 1 – May 1 each year, starting the year after the LLC's initial filing",
+    "fee": "$50",
+    "filingUrl": "https://www.sos.ri.gov/divisions/business-services/ri-business/file-your-annual-report/",
+    "latePenalty": "$25 late penalty applied June 1 (plus a $3.00 surcharge to file online); courtesy reminder mailed each January to the resident agent; revoked entities must complete additional steps before filing an annual report",
+    "notes": "Per the official RI Department of State annual-report schedule: LLC Form 632, $50 fee ($52.50 online via $2.50 enhanced-access fee; late adds $25 + $3.00 online). Separate obligation: $400 minimum annual tax to the RI Division of Taxation, owed by every LLC regardless of profit or activity (not an SOS fee). File online via the RI Business Portal (CID + PIN) or by mail to Division of Business Services, 148 W. River Street, Providence, RI 02904-2615.",
+    "reportName": "Annual Report (Form 632)",
+    "slug": "rhode-island"
+  },
+  {
+    "dueRule": "None — South Carolina LLCs file no annual report with the Secretary of State",
+    "fee": "$0",
+    "filingUrl": "https://sos.sc.gov/node/156",
+    "latePenalty": "None at the SOS — no periodic filing exists to be late on",
+    "notes": "SC DOR Revenue Ruling #05-11 (official): 'A Limited Liability Company (LLC) that is not taxed as a corporation' is not subject to the annual report or license fee. Exception: an LLC taxed as a C-corp or S-corp must file Form CL-1 (Initial Annual Report, $25, within 60 days of formation) with the SOS and then an annual corporate return (SC1120/SC1120S with Schedule D) plus the $25 minimum license fee with the Department of Revenue. SOS portal (Business Entities Online, confirmed live) handles formation/amendments/certificates.",
+    "reportName": "None (no annual report for LLCs)",
+    "slug": "south-carolina"
+  },
+  {
+    "dueRule": "Due every year on the 1st day of the anniversary month of initial filing; may be filed starting 2 months before the due date",
+    "fee": "$55",
+    "filingUrl": "https://sosenterprise.sd.gov/BusinessServices/Business/AnnualReportInstr.aspx",
+    "latePenalty": "$55 late fee assessed once delinquent (2 months past the due date); continued delinquency leads to administrative dissolution. Note: the live online instructions page still displays $50; the SOS annual-report FAQ and statute (HB 1024, eff. 7/1/2025) show $55.",
+    "notes": "Fee increased from $50 to $55 online effective July 1, 2025 (HB 1024); paper filing is $70 including a $15 paper processing fee. Limited partnerships and business trusts are exempt from annual reports.",
+    "reportName": "Annual Report",
+    "slug": "south-dakota"
+  },
+  {
+    "dueRule": "Due on the first day of the 4th month following the end of the fiscal year (April 1 for calendar-year entities)",
+    "fee": "$300",
+    "filingUrl": "https://tncab.tnsos.gov/portal",
+    "latePenalty": "No statutory late fee; failure to file an annual report is grounds for administrative dissolution and the entity is placed in inactive status",
+    "notes": "Fee scales with membership: $300 minimum (up to 6 members), +$50 per member over 6, up to $3,000 maximum (per sos.tn.gov FAQ). Separate from Tennessee Franchise & Excise Tax filings with the Department of Revenue. File via the TNCaB portal; paper forms also available.",
+    "reportName": "Annual Report",
+    "slug": "tennessee"
+  },
+  {
+    "dueRule": "May 15 each year (next business day if May 15 falls on a weekend or legal holiday)",
+    "fee": "$0",
+    "filingUrl": "https://comptroller.texas.gov/taxes/file-pay/",
+    "latePenalty": "$50 penalty per report filed after the due date even if no tax is due; 5% of tax due if 1-30 days late, 10% if over 30 days late; interest accrues 61 days after the due date; continued noncompliance leads to forfeiture of the right to transact business",
+    "notes": "No traditional SOS annual report. For reports due in 2024 and later, entities at or below the Comptroller's no-tax-due revenue threshold need not file a Franchise Tax Report but MUST still file an annual Information Report (Public Information Report, Form 05-102) by May 15. The standalone No Tax Due Report was discontinued; No Tax Due reports due after Jan. 1, 2016 must be filed electronically via Webfile/eSystems.",
+    "reportName": "Franchise Tax Report",
+    "slug": "texas"
+  },
+  {
+    "dueRule": "Due each year during the anniversary month of formation/registration (by the last day of that month), starting the year after formation",
+    "fee": "$18",
+    "filingUrl": "https://corporations.utah.gov",
+    "latePenalty": "$10 late renewal penalty after the grace period; continued non-renewal leads to administrative dissolution; reinstatement is $54 plus all missed fees",
+    "notes": "Utah has no Secretary of State; filings are handled by the Division of Corporations & Commercial Code. Renewals are filed through the Business Registration System (businessregistration.utah.gov, reached via 'Renew a Business' on the Division site) using a UtahID login — the portal blocks automated fetchers but is live for real users. The $18 fee includes a $5 state portal surcharge (Division FY2026 fee schedule).",
+    "reportName": "Annual Report/Renewal",
+    "slug": "utah"
+  },
+  {
+    "dueRule": "Within the first 3 months following the LLC's fiscal year end on record (e.g., by March 31 for a December 31 fiscal year end)",
+    "fee": "$45",
+    "filingUrl": "https://bizfilings.vermont.gov",
+    "latePenalty": "No separate late fee published by the SOS; the LLC loses good standing and is subject to administrative dissolution if the report remains unfiled; reinstatement $35 per the statutory fee schedule",
+    "notes": "Fee rose from $35 to $45 per Vermont Legislature fee documents citing 11 V.S.A. section 4012(a)(15); older guides still show $35. Deadline follows fiscal year end, not the formation anniversary. All filings completed online through the Online Business Service Center (paper checks accepted via the 'Print & Mail With Check' option).",
+    "reportName": "Annual Report",
+    "slug": "vermont"
+  },
+  {
+    "dueRule": "On or before the last day of the month the LLC was organized/registered, each year after formation; the SCC assesses and notifies about 2 months ahead",
+    "fee": "$50",
+    "filingUrl": "https://cis.scc.virginia.gov",
+    "latePenalty": "$25 penalty if payment is not received by the due date; the LLC is automatically canceled on the last day of the 3rd month following the due date if still unpaid",
+    "notes": "Virginia LLCs do NOT file an annual report — corporations do; LLCs pay only the $50 Annual Registration Fee to the State Corporation Commission (Clerk's Office). No fee is assessed in the year of formation. Pay online through the Clerk's Information System (CIS); the SCC warns third-party mailers offering to file for a markup are not affiliated.",
+    "reportName": "Annual Registration Fee",
+    "slug": "virginia"
+  },
+  {
+    "dueRule": "Due by the entity's expiration date — the last day of the month in which the LLC was first formed/registered; may be filed up to 180 days before",
+    "fee": "$70",
+    "filingUrl": "https://ccfs.sos.wa.gov",
+    "latePenalty": "$25 delinquency fee if the report is received past the expiration date; continued non-filing leads to administrative dissolution",
+    "notes": "Fee changed from $60 to $70 per current SOS annual report instructions (nonprofit/miscellaneous and corporation soles pay $10). The CCFS portal offers Express Annual Report options (with or without changes) that do not require a login.",
+    "reportName": "Annual Report",
+    "slug": "washington"
+  },
+  {
+    "dueRule": "January 1 through June 30 each year following the calendar year of registration (not required in the year of formation)",
+    "fee": "$25",
+    "filingUrl": "https://business4.wv.gov",
+    "latePenalty": "$50 late fee if paid after June 30 (total $75); monetary penalties plus administrative dissolution or revocation for continued failure to file",
+    "notes": "$1 online convenience fee on top of the $25 filing fee. File through the WV One Stop Business Portal (SOS encourages online filing; confirmation is electronic). Qualifying veteran-owned businesses (and since 2021 spouses of veterans/active military) have the annual report fee waived for the first four years.",
+    "reportName": "Annual Report",
+    "slug": "west-virginia"
+  },
+  {
+    "dueRule": "Annually by the last day of the quarter in which the entity was registered: March 31, June 30, September 30, or December 31",
+    "fee": "$25",
+    "filingUrl": "https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/FileOnline.aspx",
+    "latePenalty": "No late fees or penalties per DFI; failure to file leads to revocation/administrative dissolution (reinstatement available within 6 months of revocation)",
+    "notes": "Wisconsin filings are handled by the Department of Financial Institutions (DFI), not a Secretary of State. $25 is the online fee for domestic LLCs ($40 paper); foreign LLC annual reports cost $65 online/$80 paper. Reports may be filed starting the calendar quarter in which the due date falls.",
+    "reportName": "Annual Report",
+    "slug": "wisconsin"
+  },
+  {
+    "dueRule": "Due on the 1st day of the anniversary month of formation each year; may be filed up to 120 days before the due date",
+    "fee": "$60",
+    "filingUrl": "https://wyobiz.wyo.gov",
+    "latePenalty": "Entity is deemed delinquent on the 2nd day of the month following the due date; administratively dissolved if the report is not filed within 60 days after the due date. No separate monetary late fee is stated.",
+    "notes": "The 'report' is a license tax on Wyoming assets: the greater of $60 or two-tenths of one mill ($0.0002) on assets located and employed in WY (entities with $300,000 or less in WY assets pay $60). An online convenience fee applies; e-filing is not permitted if the license tax exceeds $500. Professional LLCs file a biennial report instead.",
+    "reportName": "Annual Report",
+    "slug": "wyoming"
+  }
+]
