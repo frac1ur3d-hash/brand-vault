@@ -222,6 +222,21 @@ export default function RootLayout({
                     </Link>
                   </li>
                   <li>
+                    <Link href="/tools" className="hover:text-indigo-400 transition-colors">
+                      LLC Cost Calculator
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/play" className="hover:text-indigo-400 transition-colors">
+                      Play Rain Blade
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/support" className="hover:text-indigo-400 transition-colors">
+                      Support the Come-Up
+                    </Link>
+                  </li>
+                  <li>
                     <a
                       href={AFFILIATE_LINKS.namecheapHome()}
                       target="_blank"
@@ -263,6 +278,16 @@ export default function RootLayout({
                   <li>
                     <Link href="/terms" className="hover:text-indigo-400 transition-colors">
                       Terms of Service &amp; Disclaimer
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/forms" className="hover:text-indigo-400 transition-colors">
+                      Business Forms Library
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog" className="hover:text-indigo-400 transition-colors">
+                      The Shit Nobody Tells You
                     </Link>
                   </li>
                 </ul>

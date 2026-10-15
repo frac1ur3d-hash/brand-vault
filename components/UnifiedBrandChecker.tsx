@@ -531,7 +531,7 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+              <div className="flex flex-col items-center gap-2 shrink-0">
                 <a
                   href={AFFILIATE_LINKS.northwest(cleanBrand)}
                   target="_blank"
@@ -542,6 +542,7 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
                   <span>Start LLC ($39 + State Fee)</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
+                <p className="text-[11px] text-slate-500 text-center">I may earn a commission if you purchase through this link.</p>
               </div>
             </div>
           </div>
@@ -560,16 +561,19 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
                   A state LLC doesn&apos;t stop anyone in another state from using your name. A federal trademark does. File in minutes.
                 </p>
               </div>
-              <a
-                href={AFFILIATE_LINKS.trademarkEngine(cleanBrand)}
-                target="_blank"
-                rel={AFFILIATE_REL}
-                className="shrink-0 px-7 py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all flex items-center justify-center gap-2 text-sm"
-              >
-                <ShieldCheck className="w-4 h-4" />
-                <span>File Trademark</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+              <div className="flex flex-col items-stretch gap-2 shrink-0">
+                <a
+                  href={AFFILIATE_LINKS.trademarkEngine(cleanBrand)}
+                  target="_blank"
+                  rel={AFFILIATE_REL}
+                  className="px-7 py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all flex items-center justify-center gap-2 text-sm"
+                >
+                  <ShieldCheck className="w-4 h-4" />
+                  <span>File Trademark</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <p className="text-[11px] text-slate-500 text-center">I may earn a commission if you purchase through this link.</p>
+              </div>
             </div>
           </div>
 
@@ -612,6 +616,8 @@ export default function UnifiedBrandChecker({ defaultQuery = '' }: { defaultQuer
                   <span>Domain DNS Clearance (Cloudflare 1.1.1.1 DoH)</span>
                 </h2>
                 <span className="text-xs text-slate-400">Live authoritative resolution</span>
+              </div>
+              <p className="text-[11px] text-slate-500">Domain purchase links may earn us a commission at no extra cost to you.</p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

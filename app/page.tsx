@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import UnifiedBrandChecker from '@/components/UnifiedBrandChecker';
+import FeedbackWidget from '@/components/FeedbackWidget';
 import AdBanner from '@/components/AdBanner';
 import statesData from '@/data/states.json';
 import {
@@ -218,6 +219,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <FeedbackWidget />
     </div>
   );
 }
