@@ -16,7 +16,7 @@ const pillars = [
   {
     icon: Briefcase,
     title: 'Jobs you can do with your dog.',
-    body: 'Real work residents are able and motivated to do — cleaning, maintenance, upkeep — with your best friend right beside you.',
+    body: 'Real work residents are able and motivated to do — cleaning, maintenance, and upkeep at the place they live, plus work in the neighborhoods around it — with your best friend right beside you.',
   },
   {
     icon: Users,
