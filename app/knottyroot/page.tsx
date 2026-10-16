@@ -81,6 +81,14 @@ export default function KnottyRootPage() {
           This is the replacement: permanent housing, real jobs, and a community strong enough
           that nobody dies alone on the sidewalk.
         </p>
+        <p className="text-sm text-slate-400 leading-relaxed">
+          At one point, 200 people lived in the city’s tiny-home village. Now the city is kicking
+          people out — not because they didn’t do what they were supposed to do, but because
+          they’ve been there too long. Three years at $95 a night is over{' '}
+          <strong className="text-slate-200">$104,000 in taxpayer dollars</strong> per person —
+          and the reward is getting booted to the street with all your stuff on the sidewalk,
+          starting from zero. No happy endings. That’s the system KnottyRoot replaces.
+        </p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
