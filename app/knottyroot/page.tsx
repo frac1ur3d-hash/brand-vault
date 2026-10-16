@@ -26,7 +26,7 @@ const pillars = [
   {
     icon: Sprout,
     title: 'In-house classes, real jobs.',
-    body: 'When you’re ready to move up in the world, we teach the classes, you get the job, and you keep living there. The ladder is inside the building.',
+    body: 'When you’re ready to move up in the world, we teach the classes for the job you want — you get certified, you get the job, and you keep living there. The ladder is inside the building.',
   },
   {
     icon: Recycle,
