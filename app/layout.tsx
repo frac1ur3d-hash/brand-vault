@@ -237,6 +237,11 @@ export default function RootLayout({
                     </Link>
                   </li>
                   <li>
+                    <Link href="/knottyroot" className="hover:text-indigo-400 transition-colors">
+                      KnottyRoot Initiative
+                    </Link>
+                  </li>
+                  <li>
                     <a
                       href={AFFILIATE_LINKS.namecheapHome()}
                       target="_blank"
