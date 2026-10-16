@@ -60,8 +60,9 @@ export default function KnottyRootPage() {
           complicated. The system just isn’t built to solve the problem.
         </p>
         <p className="text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
-          KnottyRoot Initiative is a nonprofit being built by someone who’s lived inside that
-          system for three years — to replace it with something that actually works.
+          KnottyRoot Initiative is the nonprofit that manages the property that gets people
+          off the streets — permanently. It’s being built by someone who’s lived inside the
+          old system for three years, to replace it with something that actually works.
         </p>
       </div>
 
@@ -100,7 +101,8 @@ export default function KnottyRootPage() {
       <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-6 text-center space-y-3">
         <p className="text-sm text-slate-300 leading-relaxed">
           KnottyRoot Initiative is now forming. We’re pursuing fiscal sponsorship so donations
-          can be tax-deductible from day one — then filing as an independent 501(c)(3).
+          can be tax-deductible from day one — then filing as an independent 501(c)(3) to
+          acquire and manage our first property.
         </p>
         <p className="text-sm text-slate-400">
           Want to help build it?{' '}
