@@ -54,10 +54,10 @@ export default function KnottyRootPage() {
         </h1>
         <p className="text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
           Portland spends roughly <strong className="text-white">$35,000 a year</strong> per person
-          on temporary pod shelter — and people still end up back on the street. Finland solved
-          this with <strong className="text-white">Housing First</strong>: real apartments with
-          support for about <strong className="text-white">$16,000 a year</strong> — and it works.
-          KnottyRoot is bringing that model to Portland. The math isn’t complicated.{' '}
+          on temporary pod shelter — and people still end up back on the street.{' '}
+          <strong className="text-white">Housing First</strong> works: real apartments with real
+          support — for less than the pods cost. KnottyRoot is bringing that model to Portland.
+          The math isn’t complicated.{' '}
           <strong className="text-white">We need the funding to build it.</strong>
         </p>
         <p className="text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
