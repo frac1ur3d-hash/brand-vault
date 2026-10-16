@@ -65,6 +65,23 @@ export default function KnottyRootPage() {
         </p>
       </div>
 
+      <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8 space-y-4">
+        <p className="text-xs uppercase tracking-widest text-emerald-400 font-semibold">
+          Why this exists
+        </p>
+        <blockquote className="text-xl text-white leading-relaxed font-medium">
+          “Without community, what do you got? A bunch of homeless folks dying from fetty ODs
+          while neighbors are too scared to go out and help because nobody ever taught them
+          how.”
+        </blockquote>
+        <p className="text-sm text-slate-400 leading-relaxed">
+          KnottyRoot is being built by someone who has lived inside the homelessness system for
+          three years — and watched it spend $35,000 a year per person to keep people homeless.
+          This is the replacement: permanent housing, real jobs, and a community strong enough
+          that nobody dies alone on the sidewalk.
+        </p>
+      </div>
+
       <div className="grid gap-4 sm:grid-cols-2">
         {pillars.map((p) => (
           <div
