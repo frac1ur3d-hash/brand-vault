@@ -107,37 +107,37 @@ export default function ShopPage() {
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-slate-200">
-                    <strong>Drop-Folder Automation:</strong> Drop files in <code className="text-xs bg-slate-800 px-1 py-0.5 rounded text-indigo-300">Incoming_Invoices/</code> and double-click.
+                    <strong>1-Click Drag &amp; Drop GUI:</strong> Drag your invoice folder or files right onto the visual screen. Zero command lines.
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-slate-200">
-                    <strong>100% Offline Privacy:</strong> Confidential billing records never touch external servers or the cloud.
+                    <strong>100% Offline Standalone:</strong> Runs directly on your machine. Confidential billing records never touch external servers or the cloud.
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-slate-200">
-                    <strong>Integer-Cents Math:</strong> Zero floating-point rounding errors. Catches 1-cent discrepancies.
+                    <strong>Integer-Cents Precision:</strong> Zero floating-point rounding errors. Catches 1-cent discrepancies and tax line drift.
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-slate-200">
-                    <strong>Auto-Sorting:</strong> Separates into <span className="text-emerald-400">Verified QuickBooks</span> &amp; <span className="text-rose-400">Flagged</span> folders.
+                    <strong>Instant QuickBooks Export:</strong> 1-click CSV export of all verified invoices, ready for QuickBooks or Xero.
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-slate-200">
-                    <strong>Multi-Format Ingestion:</strong> Processes JSON invoices and bulk CSV payout exports.
+                    <strong>1-Click Desktop Installer:</strong> Includes 1-click installer that puts a shortcut right on your Windows Desktop.
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-slate-200">
-                    <strong>Turnkey Runners:</strong> Includes 1-click batch runners for both Windows (<code className="text-xs bg-slate-800 px-1 py-0.5 rounded text-indigo-300">.bat</code>) and macOS/Linux (<code className="text-xs bg-slate-800 px-1 py-0.5 rounded text-indigo-300">.sh</code>).
+                    <strong>Multi-Format Ingestion:</strong> Audits both JSON invoices and Stripe/Shopify bulk payout CSV spreadsheets.
                   </span>
                 </div>
               </div>

@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import {
   CheckCircle2,
@@ -8,11 +10,24 @@ import {
   ShieldCheck,
   ArrowRight,
   Sparkles,
-  FileCode,
+  MousePointerClick,
   Laptop,
 } from 'lucide-react';
 
 export default function ShopSuccessPage() {
+  useEffect(() => {
+    // Automatically trigger the download when buyer arrives from Stripe
+    const timer = setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/downloads/recon-vault-v1.0.zip';
+      link.download = 'recon-vault-v1.0.zip';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen bg-slate-950 text-slate-100 py-16 px-4">
       <div className="max-w-3xl mx-auto w-full space-y-8">
@@ -27,13 +42,13 @@ export default function ShopSuccessPage() {
           <div className="space-y-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Payment Complete • Order Confirmed</span>
+              <span>Payment Successful • License Activated</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-              Thank You for Your Order!
+              Your Download Is Starting!
             </h1>
             <p className="text-sm sm:text-base text-slate-300 max-w-lg mx-auto">
-              Your license for <strong>ReconVault v1.0 (Deterministic Offline Invoice Reconciliation Engine)</strong> is activated.
+              Your copy of <strong>ReconVault Desktop v1.0 (1-Click Offline Invoice Reconciler)</strong> has been generated and is downloading now.
             </p>
           </div>
 
@@ -41,9 +56,9 @@ export default function ShopSuccessPage() {
           <div className="p-6 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-4">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-left space-y-1">
-                <div className="font-bold text-white text-base">ReconVault v1.0 Package</div>
+                <div className="font-bold text-white text-base">ReconVault v1.0 Standalone Package</div>
                 <div className="text-xs text-slate-400">
-                  Includes batch runners (.bat / .sh), deterministic engine, drop folders &amp; visual guide.
+                  Includes 1-Click Desktop Installer, Drag &amp; Drop Graphical UI, and QuickBooks Exporter.
                 </div>
               </div>
 
@@ -53,61 +68,60 @@ export default function ShopSuccessPage() {
                 className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold text-sm shadow-lg shadow-emerald-500/25 transition-all flex items-center justify-center gap-2 shrink-0 group cursor-pointer"
               >
                 <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
-                <span>Download .ZIP (Instant)</span>
+                <span>Click Here if Download Doesn&apos;t Start</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* 3-Step Setup Instructions */}
+        {/* 1-Click Zero-Reading Guide */}
         <div className="rounded-3xl bg-slate-900/60 border border-slate-800 p-8 space-y-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-            <Terminal className="w-5 h-5 text-indigo-400" />
-            <span>How to Run ReconVault on Your Machine</span>
-          </h2>
+          <div className="space-y-1 text-center sm:text-left">
+            <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center justify-center sm:justify-start gap-2">
+              <MousePointerClick className="w-6 h-6 text-emerald-400" />
+              <span>Zero-Setup QuickStart: 3 Simple Steps</span>
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-400">
+              No technical commands or prerequisites. Everything runs visually right on your desktop.
+            </p>
+          </div>
 
-          <div className="space-y-4 text-sm text-slate-300">
-            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-start gap-3">
-              <div className="w-7 h-7 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-bold flex items-center justify-center shrink-0 text-xs">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-300">
+            <div className="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/80 space-y-2">
+              <div className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-bold flex items-center justify-center text-sm">
                 1
               </div>
-              <div>
-                <strong className="text-white">Unzip the Downloaded File:</strong>
-                <p className="text-xs text-slate-400 mt-0.5">
-                  Extract <code className="bg-slate-900 px-1 py-0.5 rounded text-indigo-300">recon-vault-v1.0.zip</code> to any location on your local drive (e.g. Desktop or Documents).
-                </p>
-              </div>
+              <strong className="text-white block">Unzip the File</strong>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Right-click <code className="bg-slate-900 px-1 py-0.5 rounded text-indigo-300">recon-vault-v1.0.zip</code> and extract it anywhere on your computer.
+              </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-start gap-3">
-              <div className="w-7 h-7 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-bold flex items-center justify-center shrink-0 text-xs">
+            <div className="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/80 space-y-2">
+              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm">
                 2
               </div>
-              <div>
-                <strong className="text-white">Drop Your Invoices or CSVs:</strong>
-                <p className="text-xs text-slate-400 mt-0.5">
-                  Place JSON invoices or accounting export CSV files into the <code className="bg-slate-900 px-1 py-0.5 rounded text-indigo-300">Incoming_Invoices/</code> folder. We included 3 test files in <code className="bg-slate-900 px-1 py-0.5 rounded text-indigo-300">sample_files/</code> so you can test immediately.
-                </p>
-              </div>
+              <strong className="text-white block">1-Click Launch</strong>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Double-click <code className="bg-slate-900 px-1 py-0.5 rounded text-emerald-300">INSTALL-RECONVAULT.bat</code> to put an icon on your Desktop, or open <code className="bg-slate-900 px-1 py-0.5 rounded text-emerald-300">ReconVault-Desktop.html</code>.
+              </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-start gap-3">
-              <div className="w-7 h-7 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-bold flex items-center justify-center shrink-0 text-xs">
+            <div className="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/80 space-y-2">
+              <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-sm">
                 3
               </div>
-              <div>
-                <strong className="text-white">Double-Click the Runner:</strong>
-                <p className="text-xs text-slate-400 mt-0.5">
-                  On Windows, double-click <code className="bg-slate-900 px-1 py-0.5 rounded text-emerald-300">run-batch.bat</code>. On macOS or Linux, run <code className="bg-slate-900 px-1 py-0.5 rounded text-emerald-300">./run-batch.sh</code> in terminal. Everything is audited and sorted in 2 seconds flat.
-                </p>
-              </div>
+              <strong className="text-white block">Drag &amp; Drop Folder</strong>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Drag your invoice folder right onto the big box on screen. In 0.2s, see all verified invoices and penny errors instantly!
+              </p>
             </div>
           </div>
 
           <div className="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-xs text-slate-400 flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>100% Offline execution — no data ever leaves your computer.</span>
+              <span>100% Offline — invoices and confidential pricing never touch the internet.</span>
             </div>
 
             <Link

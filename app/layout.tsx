@@ -14,6 +14,7 @@ import {
   ExternalLink,
   Layers,
   Sparkles,
+  ShoppingBag,
 } from 'lucide-react';
 
 const geistSans = Geist({
