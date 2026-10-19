@@ -55,6 +55,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Software Shop Spotlight Section */}
+      <section className="max-w-6xl mx-auto px-4 w-full py-6">
+        <div className="relative rounded-3xl bg-gradient-to-r from-emerald-950/60 via-slate-900 to-indigo-950/60 border border-emerald-500/30 p-6 sm:p-8 shadow-xl overflow-hidden">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 blur-3xl pointer-events-none" />
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative">
+            <div className="space-y-2 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>BrandVault Software Store • Instant Digital Delivery</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                ReconVault <span className="text-emerald-400 font-mono text-xl sm:text-2xl font-bold">v1.0</span> — Offline B2B Invoice Reconciler
+              </h2>
+              <p className="text-sm text-slate-300 max-w-2xl">
+                Drop invoices into a folder, double-click to sweep, and audit mathematical integrity to the integer cent with zero cloud data leaks. Built for founders, accountants, and e-commerce operators.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+              <Link
+                href="/shop"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold text-sm shadow-lg shadow-emerald-500/20 transition-all flex items-center justify-center gap-2 group"
+              >
+                <span>Visit Software Shop ($47)</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Ad slot */}
       <div className="max-w-5xl mx-auto px-4 w-full">
         <AdBanner slot="1000364625" label="Sponsored Partner" />

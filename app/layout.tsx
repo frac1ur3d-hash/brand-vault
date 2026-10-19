@@ -121,6 +121,11 @@ export default function RootLayout({
               <Link href="/" className="hover:text-white transition-colors">
                 Brand Clearance
               </Link>
+              <Link href="/shop" className="hover:text-white transition-colors flex items-center gap-1.5 text-emerald-400 font-semibold">
+                <ShoppingBag className="w-4 h-4 text-emerald-400" />
+                <span>Software Shop</span>
+                <span className="px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">NEW</span>
+              </Link>
               <Link href="/llc-search/delaware" className="hover:text-white transition-colors">
                 Delaware LLC
               </Link>
@@ -137,6 +142,13 @@ export default function RootLayout({
 
             {/* Header Right Action CTA */}
             <div className="flex items-center gap-3">
+              <Link
+                href="/shop"
+                className="px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-emerald-300 border border-emerald-500/30 hover:border-emerald-500/50 font-semibold rounded-xl text-xs transition-all flex items-center gap-1.5"
+              >
+                <ShoppingBag className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Shop Tools</span>
+              </Link>
               <a
                 href={AFFILIATE_LINKS.tailorBrands()}
                 target="_blank"
@@ -209,8 +221,19 @@ export default function RootLayout({
 
               {/* Tools & Registrars */}
               <div className="space-y-2 text-xs">
-                <div className="font-bold text-white uppercase tracking-wider">Tools &amp; Registrars</div>
+                <div className="font-bold text-white uppercase tracking-wider">Software &amp; Tools</div>
                 <ul className="space-y-1.5 text-slate-400">
+                  <li>
+                    <Link href="/shop" className="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors flex items-center gap-1">
+                      <span>Software Shop</span>
+                      <span className="px-1 py-0.2 rounded text-[9px] bg-emerald-500/20 text-emerald-300">NEW</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/shop" className="hover:text-indigo-400 transition-colors">
+                      ReconVault v1.0 (Invoice Reconciler)
+                    </Link>
+                  </li>
                   <li>
                     <Link href="/" className="hover:text-indigo-400 transition-colors">
                       Live DNS / DoH Lookup
