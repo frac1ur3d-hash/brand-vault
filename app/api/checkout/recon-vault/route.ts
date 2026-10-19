@@ -18,15 +18,7 @@ export async function POST(req: NextRequest) {
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: 'ReconVault v1.0 — Offline Invoice Reconciliation Engine',
-              description: 'Turnkey offline-first B2B invoice and CSV reconciler with automated drop-folder batch sweeping, integer-cents math, and QuickBooks export. Lifetime license.',
-              images: ['https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80'],
-            },
-            unit_amount: 4700, // $47.00 USD
-          },
+          price: 'price_1USFgv8a7qlQqW2LMkOnk4l4',
           quantity: 1,
         },
       ],

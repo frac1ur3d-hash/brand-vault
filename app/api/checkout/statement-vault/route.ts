@@ -18,15 +18,7 @@ export async function POST(req: NextRequest) {
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: 'StatementVault v1.0 — Offline Bank Statement Converter',
-              description: 'Turnkey offline-first PDF bank & credit card statement to QuickBooks / CSV converter. Mathematical balance verification down to the integer cent with zero cloud uploads. Lifetime license.',
-              images: ['https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80'],
-            },
-            unit_amount: 6700, // $67.00 USD
-          },
+          price: 'price_1USFgu8a7qlQqW2LrODZQew1',
           quantity: 1,
         },
       ],

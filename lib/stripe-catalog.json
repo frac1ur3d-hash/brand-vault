@@ -1,0 +1,22 @@
+{
+  "app": "brandvault",
+  "updatedAt": "2026-10-19T12:29:22.902Z",
+  "products": {
+    "statement-vault": {
+      "productId": "prod_VTC577uuKgoFhH",
+      "priceId": "price_1USFgu8a7qlQqW2LrODZQew1",
+      "name": "StatementVault v1.0 — Offline Bank Statement Converter",
+      "amountCents": 6700,
+      "currency": "usd",
+      "mode": "payment"
+    },
+    "recon-vault": {
+      "productId": "prod_VTC5etyPzgJNhX",
+      "priceId": "price_1USFgv8a7qlQqW2LMkOnk4l4",
+      "name": "ReconVault v1.0 — Offline Invoice Reconciliation Engine",
+      "amountCents": 4700,
+      "currency": "usd",
+      "mode": "payment"
+    }
+  }
+}
