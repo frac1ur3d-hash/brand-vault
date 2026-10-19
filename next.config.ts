@@ -22,6 +22,23 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async headers() {
+    return [
+      {
+        source: "/downloads/:path*",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: "attachment; filename=\"recon-vault-v1.0.zip\"",
+          },
+          {
+            key: "Content-Type",
+            value: "application/zip",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
