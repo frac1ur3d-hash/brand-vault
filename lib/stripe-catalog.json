@@ -1,6 +1,6 @@
 {
   "app": "brandvault",
-  "updatedAt": "2026-10-19T12:29:22.902Z",
+  "updatedAt": "2026-10-19T13:06:31.463Z",
   "products": {
     "statement-vault": {
       "productId": "prod_VTC577uuKgoFhH",
@@ -17,6 +17,14 @@
       "amountCents": 4700,
       "currency": "usd",
       "mode": "payment"
+    },
+    "air-gap-concierge": {
+      "productId": "prod_VTCgompY6KI2Jp",
+      "priceId": "price_1USGGr8a7qlQqW2LenhSDU1y",
+      "name": "Air-Gap Concierge — Dedicated Offline Engineering & Custom Tooling Retainer",
+      "amountCents": 29700,
+      "currency": "usd",
+      "mode": "subscription"
     }
   }
 }

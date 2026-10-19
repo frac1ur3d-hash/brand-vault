@@ -18,11 +18,35 @@ import {
   Receipt,
   FileText,
   BadgeCheck,
+  Wrench,
+  WifiOff,
+  LifeBuoy,
 } from 'lucide-react';
 
 export default function ShopPage() {
   const [loadingRecon, setLoadingRecon] = useState(false);
   const [loadingStatement, setLoadingStatement] = useState(false);
+  const [loadingConcierge, setLoadingConcierge] = useState(false);
+
+  const handleCheckoutConcierge = async () => {
+    setLoadingConcierge(true);
+    try {
+      const res = await fetch('/api/checkout/concierge', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert(data.error || 'Failed to initiate Stripe Checkout. Please try again.');
+        setLoadingConcierge(false);
+      }
+    } catch (err: any) {
+      alert('Checkout error: ' + (err.message || 'Please check your connection'));
+      setLoadingConcierge(false);
+    }
+  };
 
   const handleCheckoutRecon = async () => {
     setLoadingRecon(true);
@@ -247,6 +271,92 @@ export default function ShopPage() {
             </div>
           </div>
 
+        </div>
+
+        {/* FEATURED SUBSCRIPTION TIER: Air-Gap Concierge */}
+        <div className="relative rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950/40 to-slate-900 border-2 border-cyan-500/50 p-8 sm:p-12 shadow-2xl overflow-hidden hover:border-cyan-400/80 transition-all">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 blur-3xl pointer-events-none" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8 space-y-6">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center gap-1.5">
+                  <Wrench className="w-3.5 h-3.5" />
+                  Dedicated Engineering Retainer
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center gap-1.5">
+                  <WifiOff className="w-3.5 h-3.5" />
+                  Unhook From Cloud APIs
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  Guaranteed Problem Resolution
+                </span>
+              </div>
+
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight flex items-center gap-3">
+                  <span>Air-Gap Concierge</span>
+                  <span className="text-cyan-400 text-lg font-bold font-mono">Monthly Retainer</span>
+                </h2>
+                <p className="text-base sm:text-lg font-semibold text-cyan-200/90 mt-1">
+                  Your On-Call Systems Engineer for Custom Offline Tooling &amp; Guaranteed Technical Fixes
+                </p>
+              </div>
+
+              <p className="text-sm text-slate-300 leading-relaxed max-w-3xl">
+                Wound up in fragile cloud API rate limits, broken Zapier chains, or vendor lock-in? If you want to unhook from the network and get your daily work done 100% locally and air-gapped, you can hire us on retainer. We guarantee direct fixes for whatever issue you face—with our software or third-party tools—and build bespoke offline utilities engineered specifically for your workstation.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200 pt-2">
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <span><strong>Guaranteed Problem Resolution:</strong> We jump in and resolve bugs or edge cases across our software or third-party utilities until it runs cleanly. Guaranteed.</span>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <span><strong>Bespoke Offline Tool Development:</strong> Need a custom converter, parser, or local batch utility? We build turnkey desktop tools for your exact workflow.</span>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <span><strong>Cloud &amp; SaaS Untangling:</strong> Step-by-step assistance untethering your sensitive operations from recurring SaaS subscriptions and cloud leaks.</span>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <span><strong>Direct Priority Access:</strong> Private direct line with 24–48h turnarounds. Cancel anytime in one click.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-4 bg-slate-950/80 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between space-y-6">
+              <div className="space-y-1">
+                <div className="text-xs text-slate-400 font-mono uppercase tracking-wider">Dedicated Engineering Retainer</div>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl sm:text-5xl font-black text-white">$297</span>
+                  <span className="text-sm text-slate-400">/ month</span>
+                </div>
+                <div className="text-xs text-cyan-400 font-medium pt-1">
+                  Cancel anytime • Zero long-term contracts
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <button
+                  onClick={handleCheckoutConcierge}
+                  disabled={loadingConcierge}
+                  className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-extrabold text-sm shadow-xl shadow-cyan-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 hover:scale-[1.01]"
+                >
+                  <LifeBuoy className="w-4 h-4" />
+                  <span>{loadingConcierge ? 'Connecting to Stripe...' : 'Subscribe to Air-Gap Concierge ($297/mo)'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+
+                <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-400 text-center">
+                  <Lock className="w-3 h-3 text-slate-500" />
+                  <span>Stripe Secure Subscription • 1-Click Self-Serve Cancel</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
