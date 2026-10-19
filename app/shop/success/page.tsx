@@ -1,32 +1,58 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
   CheckCircle2,
   Download,
-  FolderCheck,
-  Terminal,
   ShieldCheck,
   ArrowRight,
   Sparkles,
   MousePointerClick,
-  Laptop,
+  FileSpreadsheet,
 } from 'lucide-react';
 
 export default function ShopSuccessPage() {
+  const [productType, setProductType] = useState<'recon' | 'statement'>('recon');
+
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const prod = params.get('product');
+    const isStatement = prod === 'statement-vault';
+    setProductType(isStatement ? 'statement' : 'recon');
+
+    const downloadUrl = isStatement
+      ? '/downloads/statement-vault-v1.0.zip'
+      : '/downloads/recon-vault-v1.0.zip';
+    const downloadName = isStatement
+      ? 'statement-vault-v1.0.zip'
+      : 'recon-vault-v1.0.zip';
+
     // Automatically trigger the download when buyer arrives from Stripe
     const timer = setTimeout(() => {
       const link = document.createElement('a');
-      link.href = '/downloads/recon-vault-v1.0.zip';
-      link.download = 'recon-vault-v1.0.zip';
+      link.href = downloadUrl;
+      link.download = downloadName;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     }, 800);
     return () => clearTimeout(timer);
   }, []);
+
+  const isStatement = productType === 'statement';
+  const downloadUrl = isStatement
+    ? '/downloads/statement-vault-v1.0.zip'
+    : '/downloads/recon-vault-v1.0.zip';
+  const downloadName = isStatement
+    ? 'statement-vault-v1.0.zip'
+    : 'recon-vault-v1.0.zip';
+  const appTitle = isStatement
+    ? 'StatementVault Desktop v1.0 (Offline Bank Statement Converter)'
+    : 'ReconVault Desktop v1.0 (1-Click Offline Invoice Reconciler)';
+  const packageDesc = isStatement
+    ? 'Includes 1-Click Desktop Installer, Drag & Drop Bank Statement GUI, and QuickBooks CSV Exporter.'
+    : 'Includes 1-Click Desktop Installer, Drag & Drop Graphical UI, and QuickBooks Exporter.';
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-950 text-slate-100 py-16 px-4">
@@ -48,7 +74,7 @@ export default function ShopSuccessPage() {
               Your Download Is Starting!
             </h1>
             <p className="text-sm sm:text-base text-slate-300 max-w-lg mx-auto">
-              Your copy of <strong>ReconVault Desktop v1.0 (1-Click Offline Invoice Reconciler)</strong> has been generated and is downloading now.
+              Your copy of <strong>{appTitle}</strong> has been generated and is downloading now.
             </p>
           </div>
 
@@ -56,15 +82,15 @@ export default function ShopSuccessPage() {
           <div className="p-6 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-4">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-left space-y-1">
-                <div className="font-bold text-white text-base">ReconVault v1.0 Standalone Package</div>
+                <div className="font-bold text-white text-base">{isStatement ? 'StatementVault v1.0 Package' : 'ReconVault v1.0 Package'}</div>
                 <div className="text-xs text-slate-400">
-                  Includes 1-Click Desktop Installer, Drag &amp; Drop Graphical UI, and QuickBooks Exporter.
+                  {packageDesc}
                 </div>
               </div>
 
               <a
-                href="/downloads/recon-vault-v1.0.zip"
-                download="recon-vault-v1.0.zip"
+                href={downloadUrl}
+                download={downloadName}
                 className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold text-sm shadow-lg shadow-emerald-500/25 transition-all flex items-center justify-center gap-2 shrink-0 group cursor-pointer"
               >
                 <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
@@ -93,7 +119,7 @@ export default function ShopSuccessPage() {
               </div>
               <strong className="text-white block">Unzip the File</strong>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Right-click <code className="bg-slate-900 px-1 py-0.5 rounded text-indigo-300">recon-vault-v1.0.zip</code> and extract it anywhere on your computer.
+                Right-click <code className="bg-slate-900 px-1 py-0.5 rounded text-indigo-300">{downloadName}</code> and extract it anywhere on your computer.
               </p>
             </div>
 
@@ -103,7 +129,7 @@ export default function ShopSuccessPage() {
               </div>
               <strong className="text-white block">1-Click Launch</strong>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Double-click <code className="bg-slate-900 px-1 py-0.5 rounded text-emerald-300">INSTALL-RECONVAULT.bat</code> to put an icon on your Desktop, or open <code className="bg-slate-900 px-1 py-0.5 rounded text-emerald-300">ReconVault-Desktop.html</code>.
+                Double-click <code className="bg-slate-900 px-1 py-0.5 rounded text-emerald-300">{isStatement ? 'INSTALL-STATEMENTVAULT.bat' : 'INSTALL-RECONVAULT.bat'}</code> to put an icon on your Desktop, or open <code className="bg-slate-900 px-1 py-0.5 rounded text-emerald-300">{isStatement ? 'StatementVault-Desktop.html' : 'ReconVault-Desktop.html'}</code> directly.
               </p>
             </div>
 
@@ -111,9 +137,11 @@ export default function ShopSuccessPage() {
               <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-sm">
                 3
               </div>
-              <strong className="text-white block">Drag &amp; Drop Folder</strong>
+              <strong className="text-white block">Drag &amp; Drop</strong>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Drag your invoice folder right onto the big box on screen. In 0.2s, see all verified invoices and penny errors instantly!
+                {isStatement
+                  ? 'Drag your bank statement PDF onto the screen. In 0.2s, see verified opening/ending balances and export to QuickBooks CSV!'
+                  : 'Drag your invoice folder right onto the big box on screen. In 0.2s, see all verified invoices and penny errors instantly!'}
               </p>
             </div>
           </div>
@@ -121,7 +149,7 @@ export default function ShopSuccessPage() {
           <div className="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-xs text-slate-400 flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>100% Offline — invoices and confidential pricing never touch the internet.</span>
+              <span>100% Offline — private financial records never touch the internet or any cloud server.</span>
             </div>
 
             <Link

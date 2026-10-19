@@ -25,11 +25,24 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/downloads/:path*",
+        source: "/downloads/recon-vault-v1.0.zip",
         headers: [
           {
             key: "Content-Disposition",
             value: "attachment; filename=\"recon-vault-v1.0.zip\"",
+          },
+          {
+            key: "Content-Type",
+            value: "application/zip",
+          },
+        ],
+      },
+      {
+        source: "/downloads/statement-vault-v1.0.zip",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: "attachment; filename=\"statement-vault-v1.0.zip\"",
           },
           {
             key: "Content-Type",
