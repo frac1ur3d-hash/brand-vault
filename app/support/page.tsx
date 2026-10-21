@@ -26,6 +26,28 @@ export default function SupportPage() {
         </p>
       </div>
 
+      <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-6 space-y-3 text-center">
+        <p className="text-xs uppercase tracking-widest text-emerald-400 font-semibold">
+          Part of every donation goes further
+        </p>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Part of the donations raised here also go toward{' '}
+          <strong className="text-white">Knotty Roots Initiative</strong> — Kyle&apos;s nonprofit
+          at{' '}
+          <a
+            href="https://knottyroots.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-400 font-semibold hover:text-emerald-300"
+          >
+            knottyroots.org
+          </a>{' '}
+          — helping people get started again with permanent housing, real jobs, and a fresh
+          start off the streets. It ain&apos;t about getting rich, it&apos;s about getting
+          people off the streets.
+        </p>
+      </div>
+
       <div className="flex justify-center">
         <GoFundMeWidget />
       </div>
